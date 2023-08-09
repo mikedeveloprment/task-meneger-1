@@ -1,0 +1,26 @@
+@use "../../../scss/utils" as *;
+@use "../../../scss/vars" as *;
+
+.bag {
+	@include ad-value("height", $heightmax1, $heightmin1, 0, 1200, 1);
+	position: relative;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: -2px;
+		width: 70%;
+		right: 15%;
+		height: 2.75px;
+		border-radius: 4px;
+		background: $blue;
+		opacity: 0;
+		transition: ease-out 0.1s;
+	}
+	&:focus-visible::after {
+		opacity: 1;
+		transition: ease-out 0.1s;
+	}
+}

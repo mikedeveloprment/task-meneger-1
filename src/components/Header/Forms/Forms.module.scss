@@ -1,0 +1,98 @@
+@use "../../../scss/utils" as *;
+@use "../../../scss/vars" as *;
+
+.forms {
+	height: 100%;
+	display: flex;
+	flex: 0 80%;
+}
+
+.container {
+	@include ad-value("padding-right", $paddingmax3, $paddingmin3, 0, 1200, 1);
+	@include ad-value("padding-left", $paddingmax3, $paddingmin3, 0, 1200, 1);
+	flex: 1 auto;
+	max-width: 500px;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	background: $blackgreen;
+	border-radius: $border1;
+	&:hover .animation {
+		@include ad-value(
+			"margin-left",
+			$paddingmax3 - 4,
+			$paddingmin3 - 4,
+			0,
+			1200,
+			1
+		);
+		opacity: 1;
+		transform: scaleY(1) translateX(0);
+	}
+}
+
+.input {
+	@include ad-value("padding-left", $paddingmax3, $paddingmin3, 0, 1200, 1);
+	@include ad-value("font-size", 15, 11, 0, 1200, 1);
+	height: 100%;
+	width: 100%;
+	background: transparent;
+	transition: auto ease 0.4s;
+	color: $white;
+}
+
+.animation {
+	opacity: 0;
+	height: 60%;
+	transform: scaleY(0.25) translateX(4px);
+	aspect-ratio: 1/5;
+	border-radius: 3px;
+	background: $green;
+	display: flex;
+	transition: ease 0.4s;
+	will-change: auto;
+	position: relative;
+	cursor: default;
+	@media (any-hover: hover) {
+		cursor: pointer;
+	}
+	&::after,
+	&::before {
+		transition: ease 0.3s;
+		content: "";
+		position: absolute;
+		border-radius: 4px;
+		transform: rotate(45deg);
+		width: 2px;
+		height: 0%;
+		background: $white;
+	}
+	&::before {
+		transition: ease 0.3s 0.1s;
+		transform: rotate(-45deg);
+	}
+}
+.animationClick {
+	@include ad-value(
+		"margin-left",
+		$paddingmax3 - 4,
+		$paddingmin3 - 4,
+		0,
+		1200,
+		1
+	);
+	aspect-ratio: 1;
+	opacity: 1;
+	transform: scaleY(1) translateX(0);
+}
+.animationLineClick {
+	transition: ease 0.4s;
+	&::after,
+	&::before {
+		transition-delay: 0.1s;
+		height: 54%;
+	}
+	&::before {
+		transition-delay: 0s;
+	}
+}

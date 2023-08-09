@@ -1,0 +1,13 @@
+@use "../../scss/vars" as *;
+@use "../../scss/utils" as *;
+
+.sidebar {
+	height: 100dvh;
+	@include ad-value("padding", $paddingmax1, $paddingmin1, 0, 1200, 1);
+	border-right: 2px solid rgba(255, 255, 255, 0.063);
+}
+@media (width < 768px) {
+	.sidebar {
+		display: none;
+	}
+}

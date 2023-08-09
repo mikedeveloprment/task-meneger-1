@@ -1,0 +1,9 @@
+@use "../../../../scss/utils" as *;
+@use "../../../../scss/vars" as *;
+
+.list {
+	height: 100%;
+	aspect-ratio: 1;
+	border-radius: $border1;
+	background: $blackgreen;
+}

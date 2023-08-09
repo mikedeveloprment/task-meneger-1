@@ -1,0 +1,50 @@
+// -----------------------------------
+// ------------- utils ---------------
+@use "./scss/utils" as *;
+// -----------------------------------
+// ------------- vars ----------------
+@use "./scss/vars" as *;
+// -----------------------------------
+// ------------- reset ---------------
+@import "./scss/reset";
+// -----------------------------------
+// ------------- fonts ---------------
+@import url("https://db.onlinewebfonts.com/c/213e56f9ea368890b9d2da0577e49dab?family=Zona+Pro");
+// -----------------------------------
+// ------------- code ----------------
+body {
+	background: $balck;
+	color: $white;
+	font-size: 15px;
+	font-weight: 400;
+	font-family: "Zona Pro", sans-serif;
+}
+.wrapper {
+	min-height: 100vh;
+	display: flex;
+}
+
+button,
+a {
+	cursor: default;
+
+	@media (any-hover: hover) {
+		cursor: pointer;
+	}
+}
+input {
+	cursor: default;
+
+	@media (any-hover: hover) {
+		cursor: text;
+	}
+}
+
+button {
+	transition: ease-out 0.1s;
+	&:focus-visible {
+		transition: ease-out 0.1s;
+		box-shadow: 0px 0px 0px 1.65px #2965ff inset;
+	}
+}
+// -----------------------------------
