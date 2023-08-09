@@ -3,8 +3,8 @@
 
 .header {
 	@include ad-value("height", $heightmax1, $heightmin1, 0, 1200, 1);
+	@include ad-value("margin-bottom", $paddingmax1, $paddingmin1, 0, 1200, 1);
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	width: 100%;
 }

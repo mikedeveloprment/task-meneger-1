@@ -19,7 +19,9 @@ a:focus,
 a:active {
 	outline: none;
 }
-
+::-webkit-scrollbar {
+	display: none;
+}
 nav,
 footer,
 header,

@@ -20,8 +20,9 @@ body {
 	font-family: "Zona Pro", sans-serif;
 }
 .wrapper {
-	min-height: 100lvh;
+	min-height: 100dvh;
 	display: flex;
+	justify-content: flex-end;
 }
 
 button,

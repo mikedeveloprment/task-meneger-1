@@ -2,23 +2,18 @@
 @use "../../scss/utils" as *;
 
 .sidebar {
-	height: 100lvh;
+	height: 100dvh;
+	top: 0;
+	left: 0;
 	@include ad-value("padding", $paddingmax1, $paddingmin1, 0, 1200, 1);
-	position: relative;
+	position: fixed;
 	&::before {
 		content: "";
 		position: absolute;
-		@include ad-value(
-			"top",
-			$paddingmax1 * 0.8,
-			$paddingmin1 * 0.8,
-			0,
-			1200,
-			1
-		);
+		top: 3%;
 
 		right: 0;
-		height: 90%;
+		height: 94%;
 		width: 2px;
 		border-radius: 5px;
 		background: $blackgreen;
