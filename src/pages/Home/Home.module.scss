@@ -4,4 +4,12 @@
 .wrapper {
 	width: 100%;
 	@include ad-value("padding", $paddingmax1, $paddingmin1, 0, 1200, 1);
+	@include ad-value(
+		"padding-right",
+		$paddingmax1 + 4,
+		$paddingmin1 + 3,
+		0,
+		1200,
+		1
+	);
 }

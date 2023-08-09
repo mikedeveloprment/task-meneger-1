@@ -8,10 +8,18 @@
 	&::before {
 		content: "";
 		position: absolute;
-		top: 2%;
+		@include ad-value(
+			"top",
+			$paddingmax1 * 0.8,
+			$paddingmin1 * 0.8,
+			0,
+			1200,
+			1
+		);
+
 		right: 0;
-		height: 96%;
-		width: 2.5px;
+		height: 90%;
+		width: 2px;
 		border-radius: 5px;
 		background: $blackgreen;
 	}
