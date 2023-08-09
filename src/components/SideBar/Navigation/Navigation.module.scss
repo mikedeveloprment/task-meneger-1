@@ -10,7 +10,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	@include ad-value("gap", $paddingmax1 + 8, $paddingmin1 + 8, 0, 1200, 1);
+	@include ad-value("gap", $paddingmax1 + 9, $paddingmin1 + 9, 0, 1200, 1);
 }
 .item {
 	width: 100%;
@@ -43,7 +43,7 @@
 
 .icon {
 	width: 100%;
-	@include ad-value("font-size", 20, 16, 0, 1200, 1);
+	@include ad-value("font-size", 21, 16, 0, 1200, 1);
 	stroke-width: 2px;
 	color: $white;
 }

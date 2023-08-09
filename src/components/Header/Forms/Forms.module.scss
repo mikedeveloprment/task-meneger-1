@@ -33,7 +33,7 @@
 
 .input {
 	@include ad-value("padding-left", $paddingmax3, $paddingmin3, 0, 1200, 1);
-	@include ad-value("font-size", 15, 11, 0, 1200, 1);
+	@include ad-value("font-size", 15, 13, 0, 1200, 1);
 	height: 100%;
 	width: 100%;
 	background: transparent;

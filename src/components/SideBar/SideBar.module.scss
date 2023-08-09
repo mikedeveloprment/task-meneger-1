@@ -2,9 +2,19 @@
 @use "../../scss/utils" as *;
 
 .sidebar {
-	height: 100dvh;
+	height: 100%;
 	@include ad-value("padding", $paddingmax1, $paddingmin1, 0, 1200, 1);
-	border-right: 2px solid rgba(255, 255, 255, 0.063);
+	position: relative;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 2%;
+		right: 0;
+		height: 96%;
+		width: 2.5px;
+		border-radius: 5px;
+		background: $blackgreen;
+	}
 }
 @media (width < 768px) {
 	.sidebar {
