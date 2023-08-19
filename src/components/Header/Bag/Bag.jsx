@@ -1,16 +1,31 @@
 import React from "react";
 import { BsHandbag } from "react-icons/bs";
 import clas from "./Bag.module.scss";
+import { useDispatch, useSelector } from "react-redux";
+import { clickBag } from "../../../store/slices/bagSlice";
 
 const Bag = () => {
-	const [bagState, setBagState] = React.useState(false);
+	const disp = useDispatch();
+	const anim = useSelector((state) => state.bag.anim);
+	const ref = React.useRef(null);
+	function fun(event) {
+		if (event.target !== ref.current) {
+			disp(clickBag(false));
+		}
+	}
+	React.useEffect(() => {
+		document.addEventListener("click", fun);
+		return () => {
+			document.removeEventListener("click", fun);
+		};
+	}, []);
+
 	return (
 		<a
-			onClick={() => {
-				setBagState(!bagState);
-			}}
+			ref={ref}
+			onClick={() => disp(clickBag(!anim))}
 			className={
-				bagState ? `${clas.bag} ${clas.bagActive} left1` : `${clas.bag} left1`
+				anim ? `${clas.bag} ${clas.bagActive} left1` : `${clas.bag} left1`
 			}
 			tabIndex={5}
 		>

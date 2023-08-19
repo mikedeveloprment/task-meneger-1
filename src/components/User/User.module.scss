@@ -1,8 +1,9 @@
 @use "../../scss/utils" as *;
 @use "../../scss/vars" as *;
+
 .user {
 	@include ad-value("width", $heightmax1, $heightmin1, 0, 1200, 1);
-	@include ad-value("margin-bottom", 48, 28, 0, 1200, 1);
+	@include ad-value("margin-bottom", 36, 20, 0, 1200, 1);
 	aspect-ratio: 1;
 	display: flex;
 	justify-content: center;

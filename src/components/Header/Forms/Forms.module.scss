@@ -35,20 +35,27 @@
 
 .input {
 	@include ad-value("padding-left", $paddingmax3, $paddingmin3, 0, 1200, 1);
-	@include ad-value("font-size", 15, 13, 0, 1200, 1);
+	padding-top: 2px;
+	@include ad-value("font-size", 13, 11, 0, 1200, 1);
 	height: 100%;
 	width: 100%;
 	background: transparent;
 	transition: auto ease 0.4s;
 	color: $white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&::placeholder {
+		color: $gray;
+	}
 }
 
 .animation {
 	opacity: 0;
-	height: 60%;
+	height: 55%;
 	transform: scaleY(0.25) translateX(4px);
 	aspect-ratio: 1/5;
-	border-radius: 3px;
+	border-radius: 6px;
 	background: $green;
 	display: flex;
 	transition: ease 0.4s;

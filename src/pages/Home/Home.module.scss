@@ -6,13 +6,12 @@
 	@include ad-value(
 		"padding-right",
 		$paddingmax1 + 2,
-		$paddingmin1 + 1,
+		$paddingmin1 + 2,
 		0,
 		1200,
 		1
 	);
+
+	width: 100%;
 	font-size: 20px;
-	@media (width < 768px) {
-		width: 100% !important;
-	}
 }

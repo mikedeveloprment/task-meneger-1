@@ -34,6 +34,7 @@ const Forms = () => {
 					<RiSearchLine className="icon1" />
 				</label>
 				<input
+					placeholder="Search"
 					className={clas.input}
 					type="text"
 					name="searchInput"

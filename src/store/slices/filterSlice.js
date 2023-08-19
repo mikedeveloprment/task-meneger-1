@@ -8,13 +8,12 @@ export const filterSlice = createSlice({
 	name: "filter",
 	initialState,
 	reducers: {
-		click: (state, action) => {
+		clickFilter: (state, action) => {
 			state.anim = action.payload;
-			console.log(state.anim);
 		},
 	},
 });
 
-export const { click } = filterSlice.actions;
+export const { clickFilter } = filterSlice.actions;
 
 export default filterSlice.reducer;

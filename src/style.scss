@@ -41,6 +41,17 @@ input {
 	}
 }
 
+.ghost {
+	@include ad-value("padding", $paddingmax1, $paddingmin1, 0, 1200, 1);
+	@media (width < 768px) {
+		display: none;
+	}
+}
+.ghost__span {
+	display: block;
+	@include ad-value("width", $heightmax1, $heightmin1, 0, 1200, 1);
+}
+
 button {
 	transition: ease-out 0.1s;
 	&:focus-visible {

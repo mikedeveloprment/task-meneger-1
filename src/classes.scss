@@ -11,7 +11,8 @@
 	align-items: center;
 }
 .icon1 {
-	@include ad-value("font-size", 21, 17, 0, 1200, 1);
+	@include ad-value("font-size", 20, 16, 0, 1200, 1);
+	pointer-events: none;
 	color: $white;
 }
 .left1 {
