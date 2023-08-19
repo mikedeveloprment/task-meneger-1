@@ -10,19 +10,26 @@
 }
 .item {
 	@include ad-value("font-size", $tagsItemmax, $tagsItemmin, 0, 1200, 1);
-	@include ad-value("padding", $tagsItemmax, $tagsItemmin, 0, 1200, 1);
+	@include ad-value(
+		"padding",
+		$tagsItemmax * 1.1,
+		$tagsItemmin * 1.1,
+		0,
+		1200,
+		1
+	);
 	@include ad-value(
 		"padding-top",
-		$tagsItemmax * 0.6,
-		$tagsItemmin * 0.6,
+		$tagsItemmax * 0.65,
+		$tagsItemmin * 0.65,
 		0,
 		1200,
 		1
 	);
 	@include ad-value(
 		"padding-bottom",
-		$tagsItemmax * 0.6,
-		$tagsItemmin * 0.6,
+		$tagsItemmax * 0.65,
+		$tagsItemmin * 0.65,
 		0,
 		1200,
 		1
@@ -30,8 +37,8 @@
 
 	@include ad-value(
 		"border-radius",
-		$tagsItemmax * 0.7,
-		$tagsItemmin * 0.7,
+		$tagsItemmax * 0.75,
+		$tagsItemmin * 0.75,
 		0,
 		1200,
 		1
