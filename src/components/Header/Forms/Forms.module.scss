@@ -55,13 +55,21 @@
 	height: 55%;
 	transform: scaleY(0.25) translateX(4px);
 	aspect-ratio: 1/5;
-	border-radius: 6px;
+	@include ad-value(
+		"border-radius",
+		$tagsItemmax * 0.65,
+		$tagsItemmin * 0.65,
+		0,
+		1200,
+		1
+	);
 	background: $green;
 	display: flex;
-	transition: ease 0.4s;
+	transition: $transition1;
 	will-change: auto;
 	position: relative;
 	cursor: default;
+	will-change: auto;
 	@media (any-hover: hover) {
 		cursor: pointer;
 	}
@@ -72,7 +80,7 @@
 		position: absolute;
 		border-radius: 4px;
 		transform: rotate(45deg);
-		width: 2px;
+		width: 1.75px;
 		height: 0%;
 		background: $white;
 	}

@@ -18,13 +18,14 @@
 		border-radius: 4px;
 		background: $blue;
 		opacity: 0;
-		transition: ease-out 0.1s;
+		transition: ease 0.1s;
+		will-change: auto;
 	}
 	&:focus-visible::after {
 		opacity: 1;
-		transition: ease-out 0.1s;
 	}
 	&::before {
+		will-change: auto;
 		content: "";
 		position: absolute;
 		bottom: -8px;
@@ -33,7 +34,7 @@
 		aspect-ratio: 4/1;
 		border-radius: 4px;
 		background: $green;
-		transition: ease 0.4s;
+		transition: $transition1;
 		opacity: 0;
 	}
 	&:hover::before {

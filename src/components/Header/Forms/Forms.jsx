@@ -12,9 +12,13 @@ const Forms = () => {
 	const [inputValue, setInputValue] = React.useState("");
 	const inputRef = React.useRef(null);
 
-	const onChangeInput = () => {
+	const onChangeInput = (event) => {
 		setInputValue(inputRef.current?.value);
 		setinputAnim({ button: true, line: true });
+
+		const result = event.target.value.replace(/[^a-z]/gi, "");
+
+		setInputValue(result);
 	};
 	const onClickNull = () => {
 		setInputValue("");
@@ -45,6 +49,14 @@ const Forms = () => {
 					ref={inputRef}
 					maxLength={32}
 					onChange={onChangeInput}
+					onKeyDown={(event) => {
+						var ew = event.which;
+						if (ew == 32) return true;
+						if (48 <= ew && ew <= 57) return true;
+						if (65 <= ew && ew <= 90) return true;
+						if (97 <= ew && ew <= 122) return true;
+						return false;
+					}}
 				/>
 				<button
 					tabIndex={-1}
