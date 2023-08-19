@@ -2,6 +2,7 @@ import React from "react";
 import { RiSearchLine } from "react-icons/ri";
 import clas from "./Forms.module.scss";
 import Select from "./Select/Select";
+import { useSelector } from "react-redux";
 
 const Forms = () => {
 	const [inputAnim, setinputAnim] = React.useState({
@@ -19,6 +20,8 @@ const Forms = () => {
 		setInputValue("");
 		inputRef.current.focus();
 	};
+
+	const anim = useSelector((state) => state.filter.anim);
 
 	return (
 		<div className={clas.forms}>
@@ -55,6 +58,9 @@ const Forms = () => {
 				></button>
 			</div>
 			<Select />
+			<div
+				className={anim ? `${clas.filters} ${clas.filtersClick}` : clas.filters}
+			></div>
 		</div>
 	);
 };

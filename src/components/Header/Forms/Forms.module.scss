@@ -4,15 +4,17 @@
 .forms {
 	height: 100%;
 	display: flex;
-	flex: 0 80%;
+	width: 80%;
+	position: relative;
+	max-width: 600px;
 }
 
 .container {
 	@include ad-value("padding-right", $paddingmax3, $paddingmin3, 0, 1200, 1);
 	@include ad-value("padding-left", $paddingmax3, $paddingmin3, 0, 1200, 1);
 	flex: 1 auto;
-	max-width: 500px;
 	height: 100%;
+
 	display: flex;
 	align-items: center;
 	background: $blackgreen;
@@ -95,4 +97,26 @@
 	&::before {
 		transition-delay: 0s;
 	}
+}
+
+.filters {
+	height: 300%;
+	width: 100%;
+	max-width: 350px;
+	border-radius: $border1;
+	background: $blackgreen;
+	position: absolute;
+	transform-origin: top right;
+	right: 0;
+	opacity: 0;
+	transition: 0.3s ease;
+	top: 100%;
+	margin-top: -24px;
+	pointer-events: none;
+	will-change: auto;
+}
+.filtersClick {
+	opacity: 1;
+	@include ad-value("margin-top", $paddingmax3, $paddingmin3, 0, 1200, 1);
+	pointer-events: all;
 }

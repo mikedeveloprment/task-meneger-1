@@ -3,8 +3,17 @@ import { BsHandbag } from "react-icons/bs";
 import clas from "./Bag.module.scss";
 
 const Bag = () => {
+	const [bagState, setBagState] = React.useState(false);
 	return (
-		<a className={`${clas.bag} left1`} tabIndex={5}>
+		<a
+			onClick={() => {
+				setBagState(!bagState);
+			}}
+			className={
+				bagState ? `${clas.bag} ${clas.bagActive} left1` : `${clas.bag} left1`
+			}
+			tabIndex={5}
+		>
 			<BsHandbag className="icon1" />
 		</a>
 	);
