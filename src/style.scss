@@ -18,9 +18,10 @@ body {
 	font-size: 15px;
 	font-weight: 400;
 	font-family: "Zona Pro", sans-serif;
+	min-height: 100dvh;
 }
 .wrapper {
-	min-height: 100dvh;
+	min-height: 100%;
 	display: flex;
 	justify-content: flex-end;
 }
