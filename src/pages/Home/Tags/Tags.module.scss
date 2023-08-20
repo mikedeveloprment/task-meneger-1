@@ -86,11 +86,20 @@
 	justify-content: center;
 	align-items: center;
 	position: relative;
+	transition: $transition1;
+	&:hover {
+		filter: opacity(0.8);
+	}
+	&:hover .line {
+		width: 40%;
+	}
 }
 .line {
+	transition: width $transition1;
+
 	position: absolute;
-	@include ad-value("width", 9, 10, 0, 1200, 1);
 	height: 1.2px;
+	width: 50%;
 	background: $white;
 	border-radius: 5px;
 	display: block;
