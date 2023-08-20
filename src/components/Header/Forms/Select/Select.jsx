@@ -1,24 +1,12 @@
-import React, { useRef } from "react";
+import React from "react";
 import { IoGitBranchOutline } from "react-icons/io5";
 import clas from "./Select.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { clickFilter } from "../../../../store/slices/filterSlice";
 
-const Select = () => {
+const Select = React.forwardRef((props, ref) => {
 	const disp = useDispatch();
 	const anim = useSelector((state) => state.filter.anim);
-	const ref = React.useRef(null);
-	function fun(event) {
-		if (event.target !== ref.current) {
-			disp(clickFilter(false));
-		}
-	}
-	React.useEffect(() => {
-		document.addEventListener("click", fun);
-		return () => {
-			document.removeEventListener("click", fun);
-		};
-	}, []);
 	return (
 		<>
 			<button
@@ -35,6 +23,6 @@ const Select = () => {
 			</button>
 		</>
 	);
-};
+});
 
 export default Select;

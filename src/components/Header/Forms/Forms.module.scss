@@ -129,9 +129,17 @@
 	margin-top: -24px;
 	pointer-events: none;
 	will-change: auto;
+	z-index: 10;
 }
 .filtersClick {
 	opacity: 1;
-	@include ad-value("margin-top", $paddingmax3, $paddingmin3, 0, 1200, 1);
+	@include ad-value(
+		"margin-top",
+		$paddingmax3 - 2,
+		$paddingmin3 - 2,
+		0,
+		1200,
+		1
+	);
 	pointer-events: all;
 }

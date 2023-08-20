@@ -2,7 +2,8 @@ import React from "react";
 import { RiSearchLine } from "react-icons/ri";
 import clas from "./Forms.module.scss";
 import Select from "./Select/Select";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { clickFilter } from "../../../store/slices/filterSlice";
 
 const Forms = () => {
 	//
@@ -10,6 +11,7 @@ const Forms = () => {
 		button: false,
 		line: false,
 	});
+
 	const [inputValue, setInputValue] = React.useState("");
 	const inputRef = React.useRef(null);
 	const anim = useSelector((state) => state.filter.anim);
@@ -20,10 +22,27 @@ const Forms = () => {
 		const result = event.target.value.replace(/[^1-z]/gi, "");
 		setInputValue(result);
 	};
+
 	const onClickNull = () => {
 		setInputValue("");
 		inputRef.current.focus();
 	};
+
+	const ref = React.useRef(null);
+	const refFil = React.useRef(null);
+	const disp = useDispatch();
+
+	function fun(event) {
+		if (event.target !== refFil.current && event.target !== ref.current) {
+			disp(clickFilter(false));
+		}
+	}
+	React.useEffect(() => {
+		document.addEventListener("click", fun);
+		return () => {
+			document.removeEventListener("click", fun);
+		};
+	}, []);
 
 	return (
 		<div className={clas.forms}>
@@ -60,8 +79,9 @@ const Forms = () => {
 					onClick={onClickNull}
 				></button>
 			</div>
-			<Select />
+			<Select ref={ref} />
 			<div
+				ref={refFil}
 				className={anim ? `${clas.filters} ${clas.filtersClick}` : clas.filters}
 			></div>
 		</div>
