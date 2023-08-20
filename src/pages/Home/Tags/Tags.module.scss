@@ -20,8 +20,8 @@
 
 	@include ad-value(
 		"padding",
-		$tagsItemmax * 0.3,
-		$tagsItemmin * 0.33,
+		$tagsItemmax * 0.4,
+		$tagsItemmin * 0.35,
 		0,
 		1200,
 		1
@@ -44,8 +44,8 @@
 	);
 	@include ad-value(
 		"border-radius",
-		$tagsItemmax * 0.75,
-		$tagsItemmin * 0.75,
+		$tagsItemmax * 0.7,
+		$tagsItemmin * 0.8,
 		0,
 		1200,
 		1
@@ -67,7 +67,7 @@
 	@include ad-value(
 		"border-radius",
 		$tagsItemmax * 0.55,
-		$tagsItemmin * 0.55,
+		$tagsItemmin * 0.6,
 		0,
 		1200,
 		1
@@ -75,4 +75,23 @@
 	aspect-ratio: 1;
 	background: $blackgreen;
 	filter: opacity(0.65);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+.line {
+	position: absolute;
+	width: 45%;
+	height: 1px;
+	background: $white;
+	border-radius: 5px;
+	display: block;
+}
+.line1 {
+	transform: rotate(-45deg);
+}
+
+.line2 {
+	transform: rotate(45deg);
 }
