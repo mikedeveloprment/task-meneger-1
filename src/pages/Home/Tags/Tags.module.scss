@@ -89,8 +89,8 @@
 }
 .line {
 	position: absolute;
-	width: 53%;
-	height: 1px;
+	@include ad-value("width", 9, 10, 0, 1200, 1);
+	height: 1.2px;
 	background: $white;
 	border-radius: 5px;
 	display: block;
