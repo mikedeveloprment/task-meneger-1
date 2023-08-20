@@ -21,7 +21,7 @@
 	@include ad-value(
 		"padding",
 		$tagsItemmax * 0.4,
-		$tagsItemmin * 0.45,
+		$tagsItemmin * 0.4,
 		0,
 		1200,
 		1
@@ -37,7 +37,7 @@
 	@include ad-value(
 		"padding-right",
 		$tagsItemmax * 0.4,
-		$tagsItemmin * 0.5,
+		$tagsItemmin * 0.45,
 		0,
 		1200,
 		1
@@ -66,7 +66,7 @@
 	@include ad-value(
 		"margin-left",
 		$tagsItemmax * 0.6,
-		$tagsItemmin * 0.7,
+		$tagsItemmin * 0.65,
 		0,
 		1200,
 		1
