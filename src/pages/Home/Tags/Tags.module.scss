@@ -9,7 +9,7 @@
 	gap: 6px;
 }
 .item {
-	@include ad-value("font-size", $tagsItemmax, $tagsItemmin, 0, 1200, 1);
+	@include ad-value("font-size", $tagsItemmax, $tagsItemmin * 1.1, 0, 1200, 1);
 	@include ad-value(
 		"padding",
 		$tagsItemmax * 1.1,
@@ -21,7 +21,7 @@
 	@include ad-value(
 		"padding-top",
 		$tagsItemmax * 0.65,
-		$tagsItemmin * 0.65,
+		$tagsItemmin * 0.7,
 		0,
 		1200,
 		1
@@ -29,7 +29,7 @@
 	@include ad-value(
 		"padding-bottom",
 		$tagsItemmax * 0.65,
-		$tagsItemmin * 0.65,
+		$tagsItemmin * 0.7,
 		0,
 		1200,
 		1
@@ -44,6 +44,6 @@
 		1
 	);
 
-	color: $balck;
+	color: $blackgreen;
 	background: $green;
 }
