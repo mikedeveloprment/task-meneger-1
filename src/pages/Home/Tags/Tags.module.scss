@@ -11,8 +11,8 @@
 	align-items: center;
 	@include ad-value(
 		"font-size",
-		$tagsItemmax * 1.05,
-		$tagsItemmin * 1.1,
+		$tagsItemmax * 1,
+		$tagsItemmin * 1.03,
 		0,
 		1200,
 		1
@@ -55,7 +55,7 @@
 	background: $green;
 }
 .button {
-	@include ad-value("height", $paddingmax1 * 1, $paddingmin1 * 1.1, 0, 1200, 1);
+	@include ad-value("height", $paddingmax1 * 1, $paddingmin1 * 1.2, 0, 1200, 1);
 	@include ad-value(
 		"margin-left",
 		$tagsItemmax * 0.7,
