@@ -58,8 +58,8 @@
 	@include ad-value("height", $paddingmax1 * 1, $paddingmin1 * 1.2, 0, 1200, 1);
 	@include ad-value(
 		"margin-left",
-		$tagsItemmax * 0.7,
-		$tagsItemmin * 0.8,
+		$tagsItemmax * 0.4,
+		$tagsItemmin * 0.5,
 		0,
 		1200,
 		1
