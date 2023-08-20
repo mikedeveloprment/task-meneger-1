@@ -4,37 +4,44 @@
 .list {
 	@include ad-value("padding-top", $paddingmax1, $paddingmin1, 0, 1200, 1);
 	@include ad-value("padding-bottom", $paddingmax1, $paddingmin1, 0, 1200, 1);
-
 	display: flex;
-	gap: 6px;
 }
-.item {
-	@include ad-value("font-size", $tagsItemmax, $tagsItemmin * 1.1, 0, 1200, 1);
+.tag {
+	display: flex;
+	align-items: center;
 	@include ad-value(
-		"padding",
-		$tagsItemmax * 1.1,
+		"font-size",
+		$tagsItemmax * 1.05,
 		$tagsItemmin * 1.1,
 		0,
 		1200,
 		1
 	);
-	@include ad-value(
-		"padding-top",
-		$tagsItemmax * 0.65,
-		$tagsItemmin * 0.7,
-		0,
-		1200,
-		1
-	);
-	@include ad-value(
-		"padding-bottom",
-		$tagsItemmax * 0.65,
-		$tagsItemmin * 0.7,
-		0,
-		1200,
-		1
-	);
 
+	@include ad-value(
+		"padding",
+		$tagsItemmax * 0.4,
+		$tagsItemmin * 0.4,
+		0,
+		1200,
+		1
+	);
+	@include ad-value(
+		"padding-left",
+		$tagsItemmax * 0.9,
+		$tagsItemmin,
+		0,
+		1200,
+		1
+	);
+	@include ad-value(
+		"padding-right",
+		$tagsItemmax * 0.4,
+		$tagsItemmin * 0.5,
+		0,
+		1200,
+		1
+	);
 	@include ad-value(
 		"border-radius",
 		$tagsItemmax * 0.75,
@@ -46,4 +53,26 @@
 
 	color: $blackgreen;
 	background: $green;
+}
+.button {
+	@include ad-value("height", $paddingmax1 * 1, $paddingmin1 * 1.1, 0, 1200, 1);
+	@include ad-value(
+		"margin-left",
+		$tagsItemmax * 0.7,
+		$tagsItemmin * 0.8,
+		0,
+		1200,
+		1
+	);
+	@include ad-value(
+		"border-radius",
+		$tagsItemmax * 0.55,
+		$tagsItemmin * 0.55,
+		0,
+		1200,
+		1
+	);
+	aspect-ratio: 1;
+	background: $blackgreen;
+	filter: opacity(0.65);
 }
