@@ -21,7 +21,7 @@
 	@include ad-value(
 		"padding",
 		$tagsItemmax * 0.4,
-		$tagsItemmin * 0.35,
+		$tagsItemmin * 0.45,
 		0,
 		1200,
 		1
@@ -55,7 +55,14 @@
 	background: $green;
 }
 .button {
-	@include ad-value("height", $paddingmax1 * 1, $paddingmin1 * 1.2, 0, 1200, 1);
+	@include ad-value(
+		"height",
+		$paddingmax1 * 1,
+		$paddingmin1 * 1.25,
+		0,
+		1200,
+		1
+	);
 	@include ad-value(
 		"margin-left",
 		$tagsItemmax * 0.6,
@@ -82,7 +89,7 @@
 }
 .line {
 	position: absolute;
-	width: 45%;
+	width: 53%;
 	height: 1px;
 	background: $white;
 	border-radius: 5px;
