@@ -2,9 +2,24 @@
 @use "../../../scss/vars" as *;
 
 .list {
-	@include ad-value("padding-top", $paddingmax1, $paddingmin1, 0, 1200, 1);
-	@include ad-value("padding-bottom", $paddingmax1, $paddingmin1, 0, 1200, 1);
+	@include ad-value(
+		"padding-top",
+		$paddingmax1 * 0.8,
+		$paddingmin1 * 0.8,
+		0,
+		1200,
+		1
+	);
+	@include ad-value(
+		"padding-bottom",
+		$paddingmax1 * 0.8,
+		$paddingmin1 * 0.8,
+		0,
+		1200,
+		1
+	);
 	display: flex;
+	@include ad-value("gap", 8, 10, 0, 1200, 1);
 }
 .tag {
 	display: flex;

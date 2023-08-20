@@ -11,6 +11,20 @@ const Tags = () => {
 					<span className={`${clas.line} ${clas.line2}`}></span>
 				</button>
 			</li>
+			<li className={clas.tag}>
+				<p className={clas.text}>natural</p>
+				<button className={clas.button}>
+					<span className={`${clas.line} ${clas.line1}`}></span>
+					<span className={`${clas.line} ${clas.line2}`}></span>
+				</button>
+			</li>
+			<li className={clas.tag}>
+				<p className={clas.text}>800/1200</p>
+				<button className={clas.button}>
+					<span className={`${clas.line} ${clas.line1}`}></span>
+					<span className={`${clas.line} ${clas.line2}`}></span>
+				</button>
+			</li>
 		</ul>
 	);
 };
