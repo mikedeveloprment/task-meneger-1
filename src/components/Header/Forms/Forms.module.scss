@@ -57,8 +57,8 @@
 	aspect-ratio: 1/5;
 	@include ad-value(
 		"border-radius",
-		$tagsItemmax * 0.65,
-		$tagsItemmin * 0.65,
+		$tagsItemmax * 0.55,
+		$tagsItemmin * 0.6,
 		0,
 		1200,
 		1

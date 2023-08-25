@@ -21,7 +21,7 @@ const Bag = () => {
 	}, []);
 
 	return (
-		<a
+		<button
 			ref={ref}
 			onClick={() => disp(clickBag(!anim))}
 			className={
@@ -30,7 +30,7 @@ const Bag = () => {
 			tabIndex={5}
 		>
 			<BsHandbag className="icon1" />
-		</a>
+		</button>
 	);
 };
 

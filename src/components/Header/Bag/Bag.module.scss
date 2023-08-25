@@ -3,7 +3,7 @@
 
 .bag {
 	@include ad-value("height", $heightmax1, $heightmin1, 0, 1200, 1);
-
+	background: transparent;
 	position: relative;
 	display: flex;
 	justify-content: flex-end;
@@ -11,9 +11,9 @@
 	&::after {
 		content: "";
 		position: absolute;
-		bottom: -2px;
+		bottom: 0px;
 		width: 70%;
-		right: 15%;
+		right: 16%;
 		height: 2.75px;
 		border-radius: 4px;
 		background: $blue;
@@ -23,6 +23,9 @@
 	}
 	&:focus-visible::after {
 		opacity: 1;
+	}
+	&:focus-visible {
+		box-shadow: none;
 	}
 	&::before {
 		will-change: auto;
@@ -38,7 +41,7 @@
 		opacity: 0;
 	}
 	&:hover::before {
-		bottom: -2px;
+		bottom: 0px;
 		opacity: 1;
 	}
 }
@@ -46,8 +49,8 @@
 	&::before {
 		width: 100%;
 		aspect-ratio: 1;
-		opacity: 1;
+		opacity: 1 !important;
 		right: 4%;
-		bottom: -40% !important;
+		bottom: -32% !important;
 	}
 }

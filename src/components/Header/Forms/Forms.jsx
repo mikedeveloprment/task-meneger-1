@@ -68,7 +68,7 @@ const Forms = () => {
 					onChange={onChangeInput}
 				/>
 				<button
-					tabIndex={-1}
+					tabIndex={3}
 					className={`${
 						inputAnim.button
 							? inputAnim.line || inputValue != ""
