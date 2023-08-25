@@ -6,9 +6,7 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 const Photos = () => {
 	return (
 		<div className={clas.photos}>
-			<ResponsiveMasonry
-				columnsCountBreakPoints={{ 450: 1, 500: 2, 768: 3, 1200: 4 }}
-			>
+			<ResponsiveMasonry columnsCountBreakPoints={{ 450: 2, 600: 3, 1200: 4 }}>
 				<Masonry columnsCount={3} gutter="12px" className={clas.cont}>
 					{images.map((item, index) => (
 						<img src={item} className={clas.img} />

@@ -1,6 +1,5 @@
 export const images = [
 	"https://cdn.pixabay.com/photo/2023/05/02/21/08/river-7966163_1280.png",
-	"https://cdn.pixabay.com/photo/2023/08/19/15/39/breakfast-8200753_640.jpg",
 	"https://cdn.pixabay.com/photo/2023/08/17/05/37/brown-pelican-8195511_640.jpg",
 	"https://cdn.pixabay.com/photo/2023/08/16/10/09/oranges-8193789_640.jpg",
 	"https://cdn.pixabay.com/photo/2023/07/05/18/13/mountains-8108961_640.jpg",
