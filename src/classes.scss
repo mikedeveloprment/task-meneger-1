@@ -1,2 +1,15 @@
 @use "./scss/utils" as *;
 @use "./scss/vars" as *;
+
+.gray1-bg {
+	background: $gray1;
+}
+.gray1-co {
+	color: $gray1;
+}
+.black1-bg {
+	background: $black1;
+}
+.black1-co {
+	color: $black1;
+}

@@ -3,8 +3,11 @@
 @import "./scss/reset";
 
 .wrapper {
-	min-height: 100%;
+	min-height: 100dvh;
 	width: 100%;
+	font-family: "Poppins";
+	line-height: 1;
+	font-size: 15px;
 }
 
 button,

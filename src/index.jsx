@@ -1,31 +1,20 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import "./style.scss";
-import { Provider } from "react-redux";
-import { store } from "./store/store";
-import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
+import Island from "./components/Island/Island";
+import imports from "./imports";
+import "./imports";
 
-const router = createBrowserRouter([
+const router = imports.createBrowserRouter([
 	{
 		path: "/",
 		element: (
-			<div className="wrapper">
-				<div id="detail">
-					<Outlet />
-				</div>
+			<div className="wrapper gray1-bg">
+				<Island />
 			</div>
 		),
-		children: [
-			{
-				path: "/",
-				element: <p>text</p>,
-			},
-		],
 	},
 ]);
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-	<Provider store={store}>
-		<RouterProvider router={router} />
-	</Provider>
+imports.ReactDOM.createRoot(document.getElementById("root")).render(
+	<imports.Provider store={imports.store}>
+		<imports.RouterProvider router={router} />
+	</imports.Provider>
 );
