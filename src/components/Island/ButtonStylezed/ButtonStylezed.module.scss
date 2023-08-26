@@ -18,6 +18,7 @@
 	aspect-ratio: 1;
 	box-shadow: 0px 0px 0px 1px #fff;
 	border-radius: 10px;
+	pointer-events: none;
 	transition: 0.6s $ease;
 }
 .borderActive {
@@ -33,6 +34,7 @@
 	&:hover {
 		scale: 1.05;
 	}
+	pointer-events: none;
 }
 .resizeActive {
 	scale: 0.8;

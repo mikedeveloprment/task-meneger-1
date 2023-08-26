@@ -3,13 +3,13 @@ import clas from "./Island.module.scss";
 import Increment from "../Increment/Increment";
 import ButtonStylezed from "./ButtonStylezed/ButtonStylezed";
 import { useSelector } from "react-redux";
+import clas2 from "./ButtonStylezed/ButtonStylezed.module.scss";
 
 const Island = ({ textValue = "Select" }) => {
 	const textValueArray = textValue.split("");
 	const numberDelayLetter = 0.02;
 	const { resize, border } = useSelector((state) => state.tolBar);
-
-	console.log(resize);
+	const [animClick, setAnimClick] = React.useState();
 
 	return (
 		<div
@@ -18,14 +18,20 @@ const Island = ({ textValue = "Select" }) => {
 			}
 		>
 			<nav
+				onClick={(e) => {
+					if (!e.target.className.includes(clas2.button)) {
+						setAnimClick(!animClick);
+						console.log("tre");
+					}
+				}}
 				style={{
-					width: `${resize ? "90%" : ""}`,
+					width: `${resize ? "500px" : ""}`,
 					borderRadius: `${border ? "8px" : ""}`,
 				}}
 				className={`${clas.nav} black1-bg`}
 			>
 				<div className={clas.cont}>
-					<Increment />
+					<Increment animClick={animClick} />
 				</div>
 				<p className={clas.text}>
 					{textValueArray.map((item, index) =>
