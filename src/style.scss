@@ -12,6 +12,7 @@
 
 button,
 a {
+	background: transparent;
 	cursor: default;
 	@media (any-hover: hover) {
 		cursor: pointer;

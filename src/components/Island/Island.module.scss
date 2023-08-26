@@ -13,10 +13,56 @@
 	align-items: center;
 	justify-content: center;
 }
+
 .nav {
 	@include ad-value("height", 44, 36, 0, 1600, 1);
+	@include ad-value("padding", 6, 5, 0, 1600, 1);
 	width: calc(18vw + 170px);
-
-	box-shadow: 0px 4px 40px 0px #bfbfbf;
+	box-shadow: 0px 8px 44px 0px #ababab;
 	border-radius: 30px;
+	display: flex;
+	align-items: center;
+}
+.cont {
+	height: 100%;
+	aspect-ratio: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.increment {
+	@include ad-value("height", 12, 9, 0, 1600, 1);
+	margin: 0px 6px 0px 7px;
+
+	position: relative;
+
+	aspect-ratio: 1;
+	background: #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		background: #fff;
+		width: 2px;
+		height: 100%;
+		border-radius: 5px;
+	}
+	&::after {
+		transform: rotate(90deg);
+	}
+}
+
+.text {
+	@include ad-value("font-size", 15, 11, 0, 1600, 1);
+	flex: 1 auto;
+	font-size: 14px;
+}
+.button {
+	height: 100%;
+	aspect-ratio: 1;
+	border-radius: 20px;
+	@include ad-value("margin-left", 4, 3, 0, 1600, 1);
 }
