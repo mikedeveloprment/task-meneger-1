@@ -2,22 +2,30 @@ import React from "react";
 import clas from "./Island.module.scss";
 import Increment from "../Increment/Increment";
 import ButtonStylezed from "./ButtonStylezed/ButtonStylezed";
+import { useSelector } from "react-redux";
 
 const Island = ({ textValue = "Select" }) => {
 	const textValueArray = textValue.split("");
 	const numberDelayLetter = 0.02;
-	const [animClick, setAnimClick] = React.useState();
+	const { resize, border } = useSelector((state) => state.tolBar);
+
+	console.log(resize);
 
 	return (
-		<div className={clas.wrapper}>
+		<div
+			className={
+				border ? `${clas.wrapper} ${clas.wrapperActive}` : clas.wrapper
+			}
+		>
 			<nav
-				onClick={() => {
-					setAnimClick(!animClick);
+				style={{
+					width: `${resize ? "90%" : ""}`,
+					borderRadius: `${border ? "8px" : ""}`,
 				}}
 				className={`${clas.nav} black1-bg`}
 			>
 				<div className={clas.cont}>
-					<Increment anim={animClick} />
+					<Increment />
 				</div>
 				<p className={clas.text}>
 					{textValueArray.map((item, index) =>
