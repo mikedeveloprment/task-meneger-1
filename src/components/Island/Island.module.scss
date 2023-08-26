@@ -19,7 +19,7 @@
 	@include ad-value("padding", 12, 6, 0, 1600, 1);
 }
 .nav {
-	@include ad-value("height", 48, 40, 0, 1600, 1);
+	@include ad-value("height", 48, 38, 0, 1600, 1);
 	@include ad-value("padding", 6, 5, 0, 1600, 1);
 	width: calc(18vw + 170px);
 	box-shadow: 0px 8px 44px 0px #ababab;

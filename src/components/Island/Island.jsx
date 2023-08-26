@@ -21,11 +21,12 @@ const Island = ({ textValue = "Select" }) => {
 				onClick={(e) => {
 					if (!e.target.className.includes(clas2.button)) {
 						setAnimClick(!animClick);
-						console.log("tre");
 					}
 				}}
 				style={{
-					width: `${resize ? "500px" : ""}`,
+					width: `${
+						resize ? (window.innerWidth >= 540 ? "500px" : "90%") : ""
+					}`,
 					borderRadius: `${border ? "8px" : ""}`,
 				}}
 				className={`${clas.nav} black1-bg`}
