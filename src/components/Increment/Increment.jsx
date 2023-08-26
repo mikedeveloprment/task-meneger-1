@@ -1,11 +1,16 @@
 import React from "react";
 import clas from "./Increment.module.scss";
 
-const Increment = ({ anim }) => {
+const Increment = ({}) => {
+	const [animClick, setAnimClick] = React.useState();
+
 	return (
 		<button
+			onClick={() => {
+				setAnimClick(!animClick);
+			}}
 			className={
-				anim
+				animClick
 					? `${clas.increment} ${clas.incrementNavClickMain}`
 					: clas.increment
 			}
