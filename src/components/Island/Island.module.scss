@@ -3,7 +3,6 @@
 
 .wrapper {
 	@include ad-value("padding", 18, 10, 0, 1600, 1);
-
 	padding-top: 0;
 	width: 100%;
 	position: absolute;
@@ -15,7 +14,7 @@
 }
 
 .nav {
-	@include ad-value("height", 44, 36, 0, 1600, 1);
+	@include ad-value("height", 44, 38, 0, 1600, 1);
 	@include ad-value("padding", 7, 6, 0, 1600, 1);
 	width: calc(18vw + 170px);
 	box-shadow: 0px 8px 44px 0px #ababab;
@@ -23,6 +22,7 @@
 	display: flex;
 	align-items: center;
 }
+
 .cont {
 	height: 100%;
 	aspect-ratio: 1;
