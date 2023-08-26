@@ -29,15 +29,12 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	margin-left: 3px;
 }
 .increment {
-	@include ad-value("height", 12, 9, 0, 1600, 1);
-	margin: 0px 6px 0px 7px;
-
+	@include ad-value("height", 13, 10, 0, 1600, 1);
 	position: relative;
-
 	aspect-ratio: 1;
-	background: #000;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -56,9 +53,8 @@
 }
 
 .text {
-	@include ad-value("font-size", 15, 11, 0, 1600, 1);
+	@include ad-value("font-size", 14, 10, 0, 1600, 1);
 	flex: 1 auto;
-	font-size: 14px;
 }
 .button {
 	height: 100%;
