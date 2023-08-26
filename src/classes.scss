@@ -1,21 +1,2 @@
-// ------------- utils ---------------
 @use "./scss/utils" as *;
-// -----------------------------------
-// ------------- vars ----------------
 @use "./scss/vars" as *;
-
-// -----------------------------------
-.center {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.icon1 {
-	@include ad-value("font-size", 20, 16, 0, 1200, 1);
-	pointer-events: none;
-	color: $white;
-}
-.left1 {
-	@include ad-value("margin-left", $paddingmax3, $paddingmin3, 0, 1200, 1);
-}
-// -----------------------------------

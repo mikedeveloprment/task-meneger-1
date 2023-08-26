@@ -19,11 +19,7 @@ a:focus,
 a:active {
 	outline: none;
 }
-body {
-	&::-webkit-scrollbar {
-		display: none;
-	}
-}
+
 nav,
 footer,
 header,
@@ -42,6 +38,9 @@ body {
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 	color: #fff;
+	&::-webkit-scrollbar {
+		display: none;
+	}
 }
 input,
 button,

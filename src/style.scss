@@ -1,75 +1,23 @@
-// -----------------------------------
-// ------------- utils ---------------
 @use "./scss/utils" as *;
-// -----------------------------------
-// ------------- vars ----------------
 @use "./scss/vars" as *;
-// -----------------------------------
-// ------------- reset ---------------
 @import "./scss/reset";
-// -----------------------------------
-// ------------- fonts ---------------
-@import url("https://db.onlinewebfonts.com/c/213e56f9ea368890b9d2da0577e49dab?family=Zona+Pro");
-// -----------------------------------
-// ------------- code ----------------
-body {
-	background: $balck;
-	color: $white;
-	font-size: 15px;
-	font-weight: 400;
-	font-family: "Zona Pro", sans-serif;
-	min-height: 100dvh;
-}
-#detail {
-	@include ad-value("padding", $paddingmax1, $paddingmin1, 0, 1200, 1);
-	@include ad-value(
-		"padding-right",
-		$paddingmax1 + 2,
-		$paddingmin1 + 2,
-		0,
-		1200,
-		1
-	);
-	width: 100%;
-}
+
 .wrapper {
 	min-height: 100%;
-	display: flex;
-	justify-content: flex-end;
+	width: 100%;
 }
 
 button,
 a {
 	cursor: default;
-
 	@media (any-hover: hover) {
 		cursor: pointer;
 	}
 }
+
 input {
 	cursor: default;
-
 	@media (any-hover: hover) {
 		cursor: text;
 	}
 }
-
-.ghost {
-	@include ad-value("padding", $paddingmax1, $paddingmin1, 0, 1200, 1);
-	@media (width < 768px) {
-		display: none;
-	}
-}
-.ghost__span {
-	display: block;
-	@include ad-value("width", $heightmax1, $heightmin1, 0, 1200, 1);
-}
-
-button {
-	transition: ease-out 0.1s;
-	&:focus-visible {
-		transition: ease-out 0.1s;
-		box-shadow: 0px 0px 0px 1.65px #2965ff inset;
-	}
-}
-// -----------------------------------
