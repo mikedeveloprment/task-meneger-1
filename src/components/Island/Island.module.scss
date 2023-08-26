@@ -30,9 +30,10 @@
 	justify-content: center;
 	align-items: center;
 	margin-left: 3px;
+	margin-right: 2px;
 }
 .increment {
-	@include ad-value("height", 13, 10, 0, 1600, 1);
+	@include ad-value("height", 12, 11, 0, 1600, 1);
 	position: relative;
 	aspect-ratio: 1;
 	display: flex;
@@ -53,7 +54,7 @@
 }
 
 .text {
-	@include ad-value("font-size", 14, 10, 0, 1600, 1);
+	@include ad-value("font-size", 13, 10, 0, 1600, 1);
 	flex: 1 auto;
 }
 .button {
