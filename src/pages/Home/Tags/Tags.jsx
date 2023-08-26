@@ -1,30 +1,29 @@
 import React from "react";
 import clas from "./Tags.module.scss";
+import { useDispatch, useSelector } from "react-redux";
+import { removeFilter } from "../../../store/slices/filterSlice";
 
 const Tags = () => {
+	const disp = useDispatch();
+	const filtres = useSelector((state) => state.filter.array);
+	const arr = filtres.filter((item, pos) => {
+		return filtres.indexOf(item) == pos;
+	});
+
 	return (
 		<ul className={clas.list}>
-			<li className={clas.tag}>
-				<p className={clas.text}>travel</p>
-				<button className={clas.button}>
-					<span className={`${clas.line} ${clas.line1}`}></span>
-					<span className={`${clas.line} ${clas.line2}`}></span>
-				</button>
-			</li>
-			<li className={clas.tag}>
-				<p className={clas.text}>natural</p>
-				<button className={clas.button}>
-					<span className={`${clas.line} ${clas.line1}`}></span>
-					<span className={`${clas.line} ${clas.line2}`}></span>
-				</button>
-			</li>
-			<li className={clas.tag}>
-				<p className={clas.text}>800/1200</p>
-				<button className={clas.button}>
-					<span className={`${clas.line} ${clas.line1}`}></span>
-					<span className={`${clas.line} ${clas.line2}`}></span>
-				</button>
-			</li>
+			{arr.map((item, index) => (
+				<li key={index} className={clas.tag}>
+					<p className={clas.text}>{item}</p>
+					<button
+						className={clas.button}
+						onClick={() => disp(removeFilter(item))}
+					>
+						<span className={`${clas.line} ${clas.line1}`}></span>
+						<span className={`${clas.line} ${clas.line2}`}></span>
+					</button>
+				</li>
+			))}
 		</ul>
 	);
 };

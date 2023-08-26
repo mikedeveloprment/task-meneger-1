@@ -5,6 +5,9 @@
 	height: 100dvh;
 	top: 0;
 	left: 0;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 0.5fr 1fr;
 	@include ad-value("padding", $paddingmax1, $paddingmin1, 0, 1200, 1);
 	position: fixed;
 	&::before {

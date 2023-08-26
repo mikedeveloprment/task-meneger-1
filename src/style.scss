@@ -20,6 +20,18 @@ body {
 	font-family: "Zona Pro", sans-serif;
 	min-height: 100dvh;
 }
+#detail {
+	@include ad-value("padding", $paddingmax1, $paddingmin1, 0, 1200, 1);
+	@include ad-value(
+		"padding-right",
+		$paddingmax1 + 2,
+		$paddingmin1 + 2,
+		0,
+		1200,
+		1
+	);
+	width: 100%;
+}
 .wrapper {
 	min-height: 100%;
 	display: flex;

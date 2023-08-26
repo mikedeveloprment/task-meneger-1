@@ -3,7 +3,7 @@ import { RiSearchLine } from "react-icons/ri";
 import clas from "./Forms.module.scss";
 import Select from "./Select/Select";
 import { useDispatch, useSelector } from "react-redux";
-import { clickFilter } from "../../../store/slices/filterSlice";
+import { addFilter, clickFilter } from "../../../store/slices/filterSlice";
 
 const Forms = () => {
 	//
@@ -44,6 +44,16 @@ const Forms = () => {
 		};
 	}, []);
 
+	const array = [
+		"travel",
+		"natural",
+		"800/1200",
+		"top",
+		"pvdfh",
+		"ndvkjbxkj",
+		"snvidsj",
+		"sdbvjds",
+	];
 	return (
 		<div className={clas.forms}>
 			<div
@@ -83,7 +93,20 @@ const Forms = () => {
 			<div
 				ref={refFil}
 				className={anim ? `${clas.filters} ${clas.filtersClick}` : clas.filters}
-			></div>
+			>
+				<ul>
+					{array.map((item, index) => (
+						<li
+							key={index}
+							onClick={() => {
+								disp(addFilter(item));
+							}}
+						>
+							{item}
+						</li>
+					))}
+				</ul>
+			</div>
 		</div>
 	);
 };

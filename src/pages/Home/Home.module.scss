@@ -2,16 +2,6 @@
 @use "../../scss/utils" as *;
 
 .wrapper {
-	@include ad-value("padding", $paddingmax1, $paddingmin1, 0, 1200, 1);
-	@include ad-value(
-		"padding-right",
-		$paddingmax1 + 2,
-		$paddingmin1 + 2,
-		0,
-		1200,
-		1
-	);
-
 	width: 100%;
 	font-size: 20px;
 }
