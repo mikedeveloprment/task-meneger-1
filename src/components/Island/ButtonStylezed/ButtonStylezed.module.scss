@@ -1,0 +1,9 @@
+@use "../../../scss/utils" as *;
+@use "../../../scss/vars" as *;
+
+.button {
+	height: 100%;
+	aspect-ratio: 1;
+	border-radius: 20px;
+	@include ad-value("margin-left", 4, 3, 0, 1600, 1);
+}

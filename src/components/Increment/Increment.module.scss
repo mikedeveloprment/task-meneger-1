@@ -1,0 +1,38 @@
+@use "../../scss/utils" as *;
+@use "../../scss/vars" as *;
+
+.increment {
+	@include ad-value("height", 12, 11, 0, 1600, 1);
+	position: relative;
+	aspect-ratio: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 1s $ease;
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		background: #fff;
+		transform: scaleY(0);
+		width: 2px;
+		border-radius: 5px;
+		height: 100%;
+		transform-origin: center center;
+		animation: increment-preload 0.4s forwards;
+		animation-timing-function: $ease-bounce1;
+	}
+	&::after {
+		rotate: 90deg;
+		animation-delay: 0.2s;
+	}
+}
+@keyframes increment-preload {
+	100% {
+		transform: scaleY(1);
+	}
+}
+
+.incrementNavClickMain {
+	rotate: 225deg;
+}

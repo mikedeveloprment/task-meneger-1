@@ -7,7 +7,7 @@ const router = imports.createBrowserRouter([
 		path: "/",
 		element: (
 			<div className="wrapper gray1-bg">
-				<Island />
+				<Island textValue="Create new task" />
 			</div>
 		),
 	},
