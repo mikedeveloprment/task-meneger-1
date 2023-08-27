@@ -21,10 +21,11 @@
 		transform-origin: center center;
 		animation: increment-preload 0.4s forwards;
 		animation-timing-function: $ease-bounce1;
+		animation-delay: 0.4s;
 	}
 	&::after {
 		rotate: 90deg;
-		animation-delay: 0.2s;
+		animation-delay: 0.55s;
 	}
 }
 @keyframes increment-preload {

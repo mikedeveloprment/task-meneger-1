@@ -41,7 +41,7 @@ const Island = ({ textValue = "Select" }) => {
 								key={index}
 								className={clas.letter}
 								style={{
-									animationDelay: `${(index - 1) * numberDelayLetter}s`,
+									animationDelay: `${(index - 1) * numberDelayLetter + 0.7}s`,
 								}}
 							>
 								&nbsp;
@@ -51,7 +51,7 @@ const Island = ({ textValue = "Select" }) => {
 								key={index}
 								className={clas.letter}
 								style={{
-									animationDelay: `${index * numberDelayLetter}s`,
+									animationDelay: `${(index - 1) * numberDelayLetter + 0.7}s`,
 								}}
 							>
 								{item}

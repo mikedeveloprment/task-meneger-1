@@ -11,6 +11,9 @@ const ButtonStylezed = () => {
 	return (
 		<>
 			<button
+				style={{
+					animationDelay: "0.8s",
+				}}
 				onClick={() => disp(clickBorder(!border))}
 				className={
 					border ? `${clas.button} ${clas.buttonActive}` : `${clas.button} `
@@ -32,6 +35,9 @@ const ButtonStylezed = () => {
 				></span>
 			</button>
 			<button
+				style={{
+					animationDelay: "1s",
+				}}
 				onClick={() => disp(clickResize(!resize))}
 				className={
 					resize ? `${clas.button} ${clas.buttonActive}` : `${clas.button} `
