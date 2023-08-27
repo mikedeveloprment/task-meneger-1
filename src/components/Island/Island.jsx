@@ -1,7 +1,7 @@
 import React from "react";
 import clas from "./Island.module.scss";
 import { useSelector } from "react-redux";
-import TolBar from "../tolBar/tolBar";
+import Tol from "../TolBar/Tol";
 
 const Island = ({}) => {
 	const { border, resize } = useSelector((state) => state.tolBar);
@@ -26,7 +26,7 @@ const Island = ({}) => {
 				}}
 				className={clas.menuCreate}
 			></div>
-			<TolBar ref={refTol} textValue="Create new task" />
+			<Tol ref={refTol} textValue="Create new task" />
 		</div>
 	);
 };

@@ -1,11 +1,11 @@
 import React from "react";
-import clas from "./TolBar.module.scss";
+import clas from "./Tol.module.scss";
 import Increment from "../Increment/Increment";
 import ButtonStylezed from "./ButtonStylezed/ButtonStylezed";
 import { useSelector } from "react-redux";
 import clas2 from "./ButtonStylezed/ButtonStylezed.module.scss";
 
-const TolBar = React.forwardRef(({ textValue }, ref) => {
+const Tol = React.forwardRef(({ textValue }, ref) => {
 	const { resize, border } = useSelector((state) => state.tolBar);
 	const textValueArray = textValue.split("");
 	const numberDelayLetter = 0.02;
@@ -58,4 +58,4 @@ const TolBar = React.forwardRef(({ textValue }, ref) => {
 	);
 });
 
-export default TolBar;
+export default Tol;
