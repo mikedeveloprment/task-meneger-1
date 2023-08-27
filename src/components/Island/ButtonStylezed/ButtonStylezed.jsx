@@ -12,31 +12,38 @@ const ButtonStylezed = () => {
 		<>
 			<button
 				onClick={() => disp(clickBorder(!border))}
-				className={`${clas.button} gray2-bg`}
+				className={
+					border ? `${clas.button} ${clas.buttonActive}` : `${clas.button} `
+				}
 			>
 				<span
 					className={
-						border ? `${clas.border} ${clas.borderActive}` : clas.border
+						border
+							? `${clas.item} ${clas.border}  `
+							: `${clas.item} ${clas.border} ${clas.iconShow}`
+					}
+				></span>
+				<span
+					className={
+						border
+							? `${clas.item} ${clas.circle}   ${clas.iconShow}`
+							: `${clas.item} ${clas.circle}`
 					}
 				></span>
 			</button>
 			<button
 				onClick={() => disp(clickResize(!resize))}
-				className={`${clas.button} gray2-bg`}
+				className={
+					resize ? `${clas.button} ${clas.buttonActive}` : `${clas.button} `
+				}
 			>
 				<img
 					src={resizeBig}
-					className={
-						resize ? `${clas.resize} ${clas.resizeActive}` : clas.resize
-					}
+					className={resize ? clas.icon : `${clas.icon} ${clas.iconShow}`}
 				/>
 				<img
 					src={resizeSmall}
-					className={
-						resize
-							? `${clas.resize} ${clas.resizeActive2}`
-							: `${clas.resize} ${clas.resizeActive}`
-					}
+					className={resize ? `${clas.icon} ${clas.iconShow}` : clas.icon}
 				/>
 			</button>
 		</>

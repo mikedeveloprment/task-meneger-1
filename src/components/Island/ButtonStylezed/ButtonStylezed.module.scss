@@ -10,37 +10,39 @@
 	justify-content: center;
 	align-items: center;
 	position: relative;
+	transition: 0.6s cubic-bezier(0.52, -0.5, 0.45, 1.53);
+	background: $gray2;
+}
+.buttonActive {
+	background: #00dc54;
+}
+.icon {
+	position: absolute;
+	width: 54%;
+	aspect-ratio: 1;
+	transition: 0.6s $ease;
+	pointer-events: none;
 }
 
-.border {
+.item {
+	pointer-events: none;
+	transition: 0.6s $ease;
 	display: block;
-	width: 44%;
-	aspect-ratio: 1;
-	box-shadow: 0px 0px 0px 1px #fff;
-	border-radius: 10px;
-	pointer-events: none;
-	transition: 0.6s $ease;
-}
-.borderActive {
-	scale: 1.03;
-	box-shadow: 0px 0px 0px 1px #00dc54;
-	border-radius: 2px;
-}
-.resize {
 	position: absolute;
-	width: 46%;
+
+	width: 42%;
+	box-shadow: 0px 0px 0px 1.5px #fff;
 	aspect-ratio: 1;
-	transition: 0.6s $ease;
-	&:hover {
-		scale: 1.05;
-	}
-	pointer-events: none;
 }
-.resizeActive {
-	scale: 0.8;
+.circle {
+	border-radius: 20px;
+}
+.border {
+	border-radius: 30%;
+}
+
+.iconShow {
 	opacity: 0;
-}
-.resizeActive2 {
-	opacity: 1;
-	scale: 1;
+	scale: 0.5;
+	rotate: -90deg;
 }
