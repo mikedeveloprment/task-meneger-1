@@ -1,15 +1,18 @@
 import React from "react";
 import clas from "./Island.module.scss";
-import Increment from "../Increment/Increment";
-import ButtonStylezed from "./ButtonStylezed/ButtonStylezed";
 import { useSelector } from "react-redux";
-import clas2 from "./ButtonStylezed/ButtonStylezed.module.scss";
+import TolBar from "../tolBar/tolBar";
 
-const Island = ({ textValue = "Select" }) => {
-	const textValueArray = textValue.split("");
-	const numberDelayLetter = 0.02;
-	const { resize, border } = useSelector((state) => state.tolBar);
-	const [animClick, setAnimClick] = React.useState();
+const Island = ({}) => {
+	const { border, resize } = useSelector((state) => state.tolBar);
+	const refTol = React.useRef(null);
+	const [width, setWidth] = React.useState(100);
+
+	console.log(resize);
+
+	React.useEffect(() => {
+		setWidth(refTol.current?.offsetWidth);
+	}, [refTol.current?.offsetWidth, resize]);
 
 	return (
 		<div
@@ -17,50 +20,13 @@ const Island = ({ textValue = "Select" }) => {
 				border ? `${clas.wrapper} ${clas.wrapperActive}` : clas.wrapper
 			}
 		>
-			<nav
-				onClick={(e) => {
-					if (!e.target.className.includes(clas2.button)) {
-						setAnimClick(!animClick);
-					}
-				}}
+			<div
 				style={{
-					width: `${
-						resize ? (window.innerWidth >= 540 ? "500px" : "90%") : ""
-					}`,
-					borderRadius: `${border ? "8px" : ""}`,
+					width: `${width}px`,
 				}}
-				className={`${clas.nav} black1-bg`}
-			>
-				<div className={clas.cont}>
-					<Increment animClick={animClick} />
-				</div>
-				<p className={clas.text}>
-					{textValueArray.map((item, index) =>
-						item === " " ? (
-							<span
-								key={index}
-								className={clas.letter}
-								style={{
-									animationDelay: `${(index - 1) * numberDelayLetter + 0.7}s`,
-								}}
-							>
-								&nbsp;
-							</span>
-						) : (
-							<span
-								key={index}
-								className={clas.letter}
-								style={{
-									animationDelay: `${(index - 1) * numberDelayLetter + 0.7}s`,
-								}}
-							>
-								{item}
-							</span>
-						)
-					)}
-				</p>
-				<ButtonStylezed />
-			</nav>
+				className={clas.menuCreate}
+			></div>
+			<TolBar ref={refTol} textValue="Create new task" />
 		</div>
 	);
 };
