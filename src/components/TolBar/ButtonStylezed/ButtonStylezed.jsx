@@ -8,6 +8,7 @@ import { clickBorder, clickResize } from "../../../store/slices/tolBarSlice";
 const ButtonStylezed = () => {
 	const disp = useDispatch();
 	const { resize, border } = useSelector((state) => state.tolBar);
+
 	return (
 		<>
 			<button

@@ -11,9 +11,13 @@ const Tol = ({ textValue }) => {
 	const textValueArray = textValue.split("");
 	const numberDelayLetter = 0.025;
 	const animClick = useSelector((state) => state.tolBar.animClick);
+	const { border } = useSelector((state) => state.tolBar);
 
 	return (
 		<nav
+			style={{
+				borderRadius: `${border ? "12px" : ""}`,
+			}}
 			onClick={(e) => {
 				if (!e.target.className.includes(clas2.button)) {
 					disp(animationStane(!animClick));
