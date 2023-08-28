@@ -10,10 +10,10 @@
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	transition: 0.6s cubic-bezier(0.52, -0.5, 0.45, 1.53);
+	transition: 0.6s $ease-info-button;
 	background: $gray2;
 
-	animation: buttonPreload 0.8s cubic-bezier(0.75, -1.27, 0.3, 1.55) forwards;
+	animation: buttonPreload 0.8s $ease-content-mini forwards;
 	scale: 0;
 	opacity: 0;
 }
