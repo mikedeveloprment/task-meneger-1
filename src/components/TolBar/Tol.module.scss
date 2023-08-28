@@ -160,7 +160,13 @@
 
 .time {
 	color: #fff;
+	font-size: inherit;
+	display: block;
+	height: 100%;
 	width: 100%;
+	max-height: 35px;
+	min-height: 20px;
+	aspect-ratio: 70/28;
 
 	background: $blue2;
 	color: $blue1;

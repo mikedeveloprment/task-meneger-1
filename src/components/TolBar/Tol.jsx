@@ -80,27 +80,22 @@ const Tol = ({ textValue }) => {
 					}
 				>
 					<div className={`${clas.dinamicBlock} margin-menu2`}>
-						<div
-							className={`${clas.showTime} height-menu  menu-size2 margin-menu`}
-						>
+						{/* <div className={`${clas.showTime} menu-size1 margin-menu`}>
 							<button
-								className={`${clas.timePosition} blue2-bg blue1-co menu-size2`}
+								className={`${clas.timePosition} blue2-bg height-menu-time blue1-co menu-size1`}
 							>
 								09:00
 							</button>
 							<span className={clas.timeBlockHyphen}>-</span>
 							<button
-								className={`${clas.timePosition} blue2-bg blue1-co menu-size2`}
+								className={`${clas.timePosition} blue2-bg height-menu-time blue1-co menu-size1`}
 							>
 								14:00
 							</button>
-						</div>
+						</div> */}
 						<div className={clas.timeList}>
 							{arr1.map((_, index) => (
-								<span
-									className={`${clas.time} height-menu-time menu-size2`}
-									key={index}
-								>
+								<span className={`${clas.time} menu-size1`} key={index}>
 									{index + 1 < 9 ? `0${index + 1}.00` : `${index + 1}.00`}
 								</span>
 							))}
@@ -111,13 +106,13 @@ const Tol = ({ textValue }) => {
 							onChange={(e) => constChange1(e, 1)}
 							value={value[0]}
 							placeholder="Custom Hours (from)"
-							className={`${clas.hoursInput} gray1-bg border-mini1 menu-size2 gray2-co`}
+							className={`${clas.hoursInput} gray1-bg border-mini1 menu-size1 gray2-co`}
 						/>
 						<input
 							onChange={(e) => constChange1(e, 2)}
 							value={value[1]}
 							placeholder="Custom Hours (until)"
-							className={`${clas.hoursInput} gray1-bg border-mini1 menu-size2 gray2-co`}
+							className={`${clas.hoursInput} gray1-bg border-mini1 menu-size1 gray2-co`}
 						/>
 					</div>
 					<button
