@@ -4,7 +4,7 @@
 .nav {
 	@include ad-value("height", 46, 40, 0, 1600, 1);
 	@include ad-value("padding", 6, 5.5, 0, 1600, 1);
-	width: calc(18vw + 170px);
+	width: calc(18vw + 180px);
 	box-shadow: 0px 10px 50px 0px #0000003e;
 	border-radius: 30px;
 	display: flex;
@@ -66,12 +66,13 @@
 	overflow: hidden;
 	opacity: 0;
 	left: 0;
+	// height: 80vh;
 	bottom: 100%;
 	width: 100%;
-	transform: scaleX(0.1);
+	transform: scaleX(1);
 	position: absolute;
 	transition: 0.7s $ease-content;
-	transition-delay: 0.5s;
+	transition-delay: 0s;
 	transform-origin: bottom center;
 	will-change: transform, opacity, width;
 	display: flex;
@@ -81,14 +82,14 @@
 }
 
 .animContActive {
-	transform: scaleX(1);
+	// transform: scaleX(1);
 	opacity: 1;
-	transition-delay: 0s;
+	// transition-delay: 0s;
 }
 
 .menuCreate {
 	border-radius: 12px;
-	height: 10%;
+	height: 100%;
 	width: 100%;
 	transition: 0.8s cubic-bezier(0.8, -0.4, 0.4, 1);
 	transition-delay: 0s;
@@ -103,9 +104,9 @@
 }
 
 .menuCreateActive {
-	transition: 0.8s $ease-content;
-	height: 94%;
-	transition-delay: 0.3s;
+	// 	transition: 0.8s $ease-content;
+	// 	height: 94%;
+	// 	transition-delay: 0.3s;
 }
 
 .buttonMenu {
@@ -165,9 +166,7 @@
 	height: 100%;
 	width: 100%;
 	max-height: 35px;
-	min-height: 20px;
 	aspect-ratio: 70/28;
-
 	background: $blue2;
 	color: $blue1;
 	border-radius: 30px;

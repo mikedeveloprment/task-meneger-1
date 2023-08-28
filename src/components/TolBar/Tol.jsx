@@ -29,11 +29,17 @@ const Tol = ({ textValue }) => {
 		<nav
 			onClick={(e) => {
 				if (!e.target.className.includes(clas2.button)) {
-					setAnimClick(true);
+					setAnimClick(!animClick);
 				}
 			}}
 			style={{
-				width: `${resize ? (window.innerWidth >= 540 ? "500px" : "90%") : ""}`,
+				width: `${
+					resize
+						? window.innerWidth >= 500
+							? "calc(19vw + 250px)"
+							: "90%"
+						: ""
+				}`,
 				borderRadius: `${border ? "12px" : ""}`,
 			}}
 			className={`${clas.nav} black1-bg`}
