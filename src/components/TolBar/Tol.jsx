@@ -22,6 +22,9 @@ const Tol = ({ textValue }) => {
 		}
 	};
 
+	const arr2 = [1, 2, 3, 4];
+
+	const arr1 = [...Array(24)].map((u, i) => i);
 	return (
 		<nav
 			onClick={(e) => {
@@ -77,14 +80,30 @@ const Tol = ({ textValue }) => {
 					}
 				>
 					<div className={`${clas.dinamicBlock} margin-menu2`}>
-						<div className={`${clas.showTime} height-menu  menu-size2`}>
-							<button className={`${clas.timePosition} blue2-bg blue1-co`}>
+						<div
+							className={`${clas.showTime} height-menu  menu-size2 margin-menu`}
+						>
+							<button
+								className={`${clas.timePosition} blue2-bg blue1-co menu-size2`}
+							>
 								09:00
 							</button>
 							<span className={clas.timeBlockHyphen}>-</span>
-							<button className={`${clas.timePosition} blue2-bg blue1-co `}>
+							<button
+								className={`${clas.timePosition} blue2-bg blue1-co menu-size2`}
+							>
 								14:00
 							</button>
+						</div>
+						<div className={clas.timeList}>
+							{arr1.map((_, index) => (
+								<span
+									className={`${clas.time} height-menu-time menu-size2`}
+									key={index}
+								>
+									{index + 1 < 9 ? `0${index + 1}.00` : `${index + 1}.00`}
+								</span>
+							))}
 						</div>
 					</div>
 					<div className={`${clas.formMenuCont} height-menu margin-menu `}>
