@@ -11,11 +11,44 @@
 	background: $gray2;
 }
 .gray2-co {
-	background: $gray2;
+	color: $gray2;
 }
 .black1-bg {
 	background: $black1;
 }
 .black1-co {
 	color: $black1;
+}
+.blue1-bg {
+	background: $blue1;
+}
+.blue1-co {
+	color: $blue1;
+}
+.blue2-bg {
+	background: $blue2;
+}
+.white-co {
+	color: #fff;
+}
+
+.height-menu {
+	@include ad-value("height", 37, 34, 0, 1600, 1);
+}
+.margin-menu {
+	@include ad-value("margin-bottom", 7, 4, 0, 1600, 1);
+}
+.margin-menu2 {
+	@include ad-value("margin-bottom", 14, 10, 0, 1600, 1);
+}
+.menu-size1 {
+	font-weight: 500;
+	@include ad-value("font-size", 12, 10.7, 0, 1600, 1);
+}
+.menu-size2 {
+	font-weight: 500;
+	@include ad-value("font-size", 13, 11, 0, 1600, 1);
+}
+.border-mini1 {
+	border-radius: 6px;
 }

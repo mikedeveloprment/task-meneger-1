@@ -8,14 +8,25 @@ import clas2 from "./ButtonStylezed/ButtonStylezed.module.scss";
 const Tol = ({ textValue }) => {
 	const { resize, border } = useSelector((state) => state.tolBar);
 	const textValueArray = textValue.split("");
-	const numberDelayLetter = 0.02;
-	const [animClick, setAnimClick] = React.useState();
+	const numberDelayLetter = 0.025;
+	const [animClick, setAnimClick] = React.useState(true);
+
+	const [value, setValue] = React.useState(["", ""]);
+
+	const constChange1 = (event, state) => {
+		const result = event.target.value.replace(/[^1-9.0/]/gi, "");
+		if (state === 1) {
+			setValue([result, value[1]]);
+		} else if (state === 2) {
+			setValue([value[0], result]);
+		}
+	};
 
 	return (
 		<nav
 			onClick={(e) => {
 				if (!e.target.className.includes(clas2.button)) {
-					setAnimClick(!animClick);
+					setAnimClick(true);
 				}
 			}}
 			style={{
@@ -64,7 +75,43 @@ const Tol = ({ textValue }) => {
 							? `${clas.menuCreate} ${clas.menuCreateActive}`
 							: clas.menuCreate
 					}
-				></div>
+				>
+					<div className={`${clas.dinamicBlock} margin-menu2`}>
+						<div className={`${clas.showTime} height-menu  menu-size2`}>
+							<button className={`${clas.timePosition} blue2-bg blue1-co`}>
+								09:00
+							</button>
+							<span className={clas.timeBlockHyphen}>-</span>
+							<button className={`${clas.timePosition} blue2-bg blue1-co `}>
+								14:00
+							</button>
+						</div>
+					</div>
+					<div className={`${clas.formMenuCont} height-menu margin-menu `}>
+						<input
+							onChange={(e) => constChange1(e, 1)}
+							value={value[0]}
+							placeholder="Custom Hours (from)"
+							className={`${clas.hoursInput} gray1-bg border-mini1 menu-size2 gray2-co`}
+						/>
+						<input
+							onChange={(e) => constChange1(e, 2)}
+							value={value[1]}
+							placeholder="Custom Hours (until)"
+							className={`${clas.hoursInput} gray1-bg border-mini1 menu-size2 gray2-co`}
+						/>
+					</div>
+					<button
+						className={`${clas.buttonMenu} blue2-bg height-menu margin-menu menu-size1 blue1-co`}
+					>
+						Set Date
+					</button>
+					<button
+						className={`${clas.buttonMenu} blue1-bg height-menu menu-size1 white-co`}
+					>
+						Create
+					</button>
+				</div>
 			</div>
 		</nav>
 	);
