@@ -53,7 +53,13 @@
 	}
 }
 
+//
+
+//
 .animCont {
+	border-radius: 12px;
+	height: 300px;
+	overflow: hidden;
 	opacity: 0;
 	left: 0;
 	bottom: 100%;
@@ -64,6 +70,7 @@
 	transition-delay: 0.5s;
 	transform-origin: center center;
 	will-change: transform, opacity, width;
+	@include ad-value("margin-bottom", 10, 6, 0, 1600, 1);
 }
 
 .animContActive {
@@ -73,17 +80,14 @@
 }
 
 .menuCreate {
-	height: 300px;
+	height: 100%;
 	width: 100%;
-	border-radius: 12px;
-
 	transform: scaleY(0.1);
 	transition: 0.8s cubic-bezier(0.8, -0.4, 0.4, 1);
 	transition-delay: 0s;
 	transform-origin: bottom center;
 	background: #fff;
 	will-change: transform;
-	@include ad-value("margin-bottom", 10, 6, 0, 1600, 1);
 }
 
 .menuCreateActive {
