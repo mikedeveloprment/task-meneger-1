@@ -38,7 +38,6 @@ const Island = () => {
 								: "90%"
 							: ""
 					}`,
-					borderRadius: `${border ? "12px" : ""}`,
 				}}
 			>
 				<div

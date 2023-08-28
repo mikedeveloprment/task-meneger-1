@@ -33,11 +33,11 @@
 }
 
 .height-menu {
-	@include ad-value("height", 37, 33.5, 0, 1600, 1);
+	@include ad-value("height", 37, 34.5, 0, 1600, 1);
 }
 
 .margin-menu {
-	@include ad-value("margin-bottom", 7, 4, 0, 1600, 1);
+	@include ad-value("margin-bottom", 7, 5, 0, 1600, 1);
 }
 .margin-menu2 {
 	@include ad-value("margin-bottom", 15, 12, 0, 1600, 1);
