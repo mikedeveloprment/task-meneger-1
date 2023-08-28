@@ -58,7 +58,8 @@
 //
 .animCont {
 	border-radius: 12px;
-	height: 300px;
+	height: 60vh;
+	max-height: 360px;
 	overflow: hidden;
 	opacity: 0;
 	left: 0;
@@ -66,10 +67,13 @@
 	width: 100%;
 	transform: scaleX(0.1);
 	position: absolute;
-	transition: 0.6s cubic-bezier(0.5, 0, 0.4, 1.4);
+	transition: 0.7s cubic-bezier(0.5, 0, 0.4, 1.4);
 	transition-delay: 0.5s;
-	transform-origin: center center;
+	transform-origin: bottom center;
 	will-change: transform, opacity, width;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
 	@include ad-value("margin-bottom", 10, 6, 0, 1600, 1);
 }
 
@@ -80,9 +84,10 @@
 }
 
 .menuCreate {
-	height: 100%;
+	border-radius: 12px;
+
+	height: 10%;
 	width: 100%;
-	transform: scaleY(0.1);
 	transition: 0.8s cubic-bezier(0.8, -0.4, 0.4, 1);
 	transition-delay: 0s;
 	transform-origin: bottom center;
@@ -91,7 +96,7 @@
 }
 
 .menuCreateActive {
-	transition: 0.7s cubic-bezier(0.5, 0, 0.4, 1.4);
+	transition: 0.8s cubic-bezier(0.5, 0, 0.4, 1.4);
+	height: 94%;
 	transition-delay: 0.3s;
-	transform: scaleY(1);
 }
