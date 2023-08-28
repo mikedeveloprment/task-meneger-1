@@ -63,7 +63,7 @@
 	transition: 0.6s cubic-bezier(0.5, 0, 0.4, 1.4);
 	transition-delay: 0.5s;
 	transform-origin: center center;
-	will-change: transform, opacity;
+	will-change: transform, opacity, width;
 }
 
 .animContActive {
@@ -76,7 +76,8 @@
 	height: 300px;
 	width: 100%;
 	border-radius: 12px;
-	box-shadow: 0px 0px 0px 0px #ffffff;
+	box-shadow: 0px 0px 50px 0px #0000000f;
+
 	transform: scaleY(0.1);
 	transition: 0.8s cubic-bezier(0.8, -0.4, 0.4, 1);
 	transition-delay: 0s;
@@ -89,6 +90,5 @@
 .menuCreateActive {
 	transition: 0.7s cubic-bezier(0.5, 0, 0.4, 1.4);
 	transition-delay: 0.3s;
-	box-shadow: 0px 0px 60px 0px #7b7b7b22;
 	transform: scaleY(1);
 }
