@@ -60,8 +60,8 @@
 	width: 100%;
 	transform: scaleX(0.1);
 	position: absolute;
-	transition: 0.6s cubic-bezier(0.5, 0, 0.8, 1.4);
-	transition-delay: 0.4s;
+	transition: 0.6s cubic-bezier(0.5, 0, 0.4, 1.4);
+	transition-delay: 0.5s;
 	transform-origin: center center;
 	will-change: transform, opacity;
 }
@@ -78,7 +78,7 @@
 	border-radius: 12px;
 	box-shadow: 0px 4px 65px 4px #00000005;
 	transform: scaleY(0.1);
-	transition: 0.7s cubic-bezier(0.8, -0.4, 0.4, 1);
+	transition: 0.8s cubic-bezier(0.8, -0.4, 0.4, 1);
 	transition-delay: 0s;
 	transform-origin: bottom center;
 	background: #fff;
