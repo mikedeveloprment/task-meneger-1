@@ -30,10 +30,107 @@
 	@include ad-value("padding", 10, 6, 0, 1600, 1);
 }
 
+.menuFakeCont {
+	transition: 0.6s $ease-content;
+	width: calc(18vw + 180px);
+	position: relative;
+}
+
+// .menuCreate {
+
+// 	box-shadow: 0px 8px 54px 0px rgba(0, 0, 0, 0.069);
+
+// }
+
 .menuCreate {
-	height: 400px;
 	border-radius: 12px;
-	box-shadow: 0px 8px 54px 0px rgba(0, 0, 0, 0.069);
-	background: #fff;
+	width: 100%;
+	transition: 0.8s cubic-bezier(0.8, -0.4, 0.4, 1);
 	@include ad-value("margin-bottom", 10, 6, 0, 1600, 1);
+	opacity: 0;
+	background: #fff;
+	will-change: transform;
+	flex-direction: column;
+	@include ad-value("padding", 7, 5, 0, 1600, 1);
+	transform: translateY(50px);
+	position: absolute;
+	bottom: 100%;
+}
+
+.menuCreateActive {
+	opacity: 1;
+	transform: translateY(0px);
+}
+
+.buttonMenu {
+	width: 100%;
+	border-radius: 20px;
+}
+
+.formMenuCont {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	@include ad-value("gap", 7, 4, 0, 1600, 1);
+}
+
+.hoursInput {
+	width: 50%;
+	@include ad-value("padding", 12, 10, 0, 1600, 1);
+}
+
+.showTime {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	border-radius: 20px;
+	border: 1px solid lightgray;
+	padding: 3px;
+}
+
+.timePosition {
+	height: 100%;
+	width: 44%;
+	border-radius: 20px;
+}
+
+.timeBlockHyphen {
+	font-size: inherit;
+	color: $gray2;
+}
+
+.dinamicBlock {
+	width: 100%;
+	align-self: flex-start;
+}
+
+.timeList {
+	min-height: 200px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(6, 1fr);
+	width: 100%;
+	grid-auto-flow: column;
+	@include ad-value("gap", 7, 4, 0, 1600, 1);
+}
+
+.time {
+	background: #000;
+	color: #fff;
+	display: block;
+	height: 100%;
+	width: 100%;
+	max-height: 35px;
+	aspect-ratio: 70/28;
+	background: $blue2;
+	color: $blue1;
+	border-radius: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.timeOk {
+	background: $gray1;
+	color: gray;
 }
