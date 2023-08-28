@@ -5,7 +5,7 @@ import ButtonStylezed from "./ButtonStylezed/ButtonStylezed";
 import { useSelector } from "react-redux";
 import clas2 from "./ButtonStylezed/ButtonStylezed.module.scss";
 
-const Tol = React.forwardRef(({ textValue }, ref) => {
+const Tol = ({ textValue }) => {
 	const { resize, border } = useSelector((state) => state.tolBar);
 	const textValueArray = textValue.split("");
 	const numberDelayLetter = 0.02;
@@ -13,7 +13,6 @@ const Tol = React.forwardRef(({ textValue }, ref) => {
 
 	return (
 		<nav
-			ref={ref}
 			onClick={(e) => {
 				if (!e.target.className.includes(clas2.button)) {
 					setAnimClick(!animClick);
@@ -54,8 +53,21 @@ const Tol = React.forwardRef(({ textValue }, ref) => {
 				)}
 			</p>
 			<ButtonStylezed />
+			<div
+				className={
+					animClick ? `${clas.animCont} ${clas.animContActive}` : clas.animCont
+				}
+			>
+				<div
+					className={
+						animClick
+							? `${clas.menuCreate} ${clas.menuCreateActive}`
+							: clas.menuCreate
+					}
+				></div>
+			</div>
 		</nav>
 	);
-});
+};
 
 export default Tol;
