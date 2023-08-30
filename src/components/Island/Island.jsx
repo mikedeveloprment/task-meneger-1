@@ -59,11 +59,11 @@ const Island = () => {
 					</div>
 					<ButtonBig
 						text="Set Date"
-						anotherStyles="height-menu margin-bottom-1 menu-size1 blue2-bg  blue1-co"
+						anotherStyles="height-menu margin-bottom-1 menu-size2 blue2-bg  blue1-co"
 					/>
 					<ButtonBig
 						text="Create"
-						anotherStyles="height-menu margin-bottom-1 menu-size1 blue1-bg white-co"
+						anotherStyles="height-menu margin-bottom-1 menu-size2 blue1-bg white-co"
 					/>
 				</div>
 				<DinamicIsland textValue="Create new task" />

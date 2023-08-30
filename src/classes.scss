@@ -58,7 +58,10 @@
 	font-weight: 500;
 	@include ad-value("font-size", 11.4, 9.5, 0, 1600, 1);
 }
-
+.menu-size2 {
+	font-weight: 500;
+	@include ad-value("font-size", 11.8, 10, 0, 1600, 1);
+}
 .border-mini1 {
 	border-radius: 6px;
 }

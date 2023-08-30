@@ -10,7 +10,7 @@ const InputCustom = () => {
 			<Rect color={"lightgray"} bd={1} />
 			<input
 				placeholder="Create new titile"
-				className={`${clas.input} menu-size1 gray1-bg`}
+				className={`${clas.input} menu-size2 gray1-bg`}
 			/>
 			{/* <ul className={clas.list}>
 				<li className={clas.tag}>6 July</li>
