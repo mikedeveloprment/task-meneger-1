@@ -45,14 +45,14 @@
 .menuCreate {
 	border-radius: 12px;
 	width: 100%;
-	transition: 0.8s cubic-bezier(0.8, -0.4, 0.4, 1);
+	transition: 0.7s cubic-bezier(0.17, 0.67, 0.21, 1.7);
 	@include ad-value("margin-bottom", 10, 6, 0, 1600, 1);
 	opacity: 0;
 	background: #fff;
 	will-change: transform;
 	flex-direction: column;
 	@include ad-value("padding", 7, 5, 0, 1600, 1);
-	transform: translateY(50px);
+	transform: translateY(30px);
 	position: absolute;
 	bottom: 100%;
 }
