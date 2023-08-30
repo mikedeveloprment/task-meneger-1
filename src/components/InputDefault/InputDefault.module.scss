@@ -3,5 +3,6 @@
 
 .hoursInput {
 	width: 60%;
+	flex: 1 auto;
 	@include ad-value("padding", 12, 10, 0, 1600, 1);
 }
