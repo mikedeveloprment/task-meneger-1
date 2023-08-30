@@ -49,7 +49,9 @@
 	position: absolute;
 	bottom: 100%;
 	overflow: auto;
-	max-height: 60vh;
+	@media (width < 600px) {
+		max-height: 60vh;
+	}
 }
 
 .dinamicIslandMenuActive {
