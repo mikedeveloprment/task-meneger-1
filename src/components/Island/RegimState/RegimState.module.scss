@@ -8,21 +8,38 @@
 
 .selectList {
 	width: 100%;
-	box-shadow: 0px 0px 0px 1px lightgray;
-
+	box-shadow: 0px 0px 0px 1px lightgray inset;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
 	height: 100%;
+}
+.text {
+	color: gray;
+	flex: 1 auto;
 }
 
 .buttonRegim {
+	box-shadow: 0px 0px 0px 1px lightgray inset;
 	height: 100%;
 	aspect-ratio: 1;
-	background: transparent;
-	box-shadow: 0px 0px 0px 1px lightgray;
-
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	img {
-		width: 54%;
+		height: 55%;
+	}
+}
+
+.contIcon {
+	height: 100%;
+	aspect-ratio: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	img {
+		rotate: 90deg;
+		height: 34%;
+		pointer-events: none;
 	}
 }
