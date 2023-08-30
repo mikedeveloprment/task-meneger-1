@@ -7,6 +7,7 @@ import InputDefault from "../InputDefault/InputDefault";
 import ButtonBig from "../ButtonBig/ButtonBig";
 import { clickResize } from "../../store/slices/tolBarSlice";
 import DinamicMounth from "./DinamicMounth/DinamicMounth";
+import RegimState from "./RegimState/RegimState";
 
 const Island = () => {
 	const disp = useDispatch();
@@ -47,6 +48,7 @@ const Island = () => {
 				}}
 			>
 				<div className={dinamicMenuStateFunction()}>
+					<RegimState />
 					<DinamicMounth />
 					<DinamicMenuBlock refFake={refFake} />
 					<div className={`${clas.timeCont} height-menu margin-bottom-1 `}>
