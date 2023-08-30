@@ -6,6 +6,7 @@ import DinamicMenuBlock from "./DinamicMenuBlock/DinamicMenuBlock";
 import InputDefault from "../InputDefault/InputDefault";
 import ButtonBig from "../ButtonBig/ButtonBig";
 import { clickResize } from "../../store/slices/tolBarSlice";
+import DinamicMounth from "./DinamicMounth/DinamicMounth";
 
 const Island = () => {
 	const disp = useDispatch();
@@ -21,7 +22,6 @@ const Island = () => {
 			return `${clas.dinamicIslandMenu} ${clas.dinamicIslandMenuActive}`;
 		return clas.dinamicIslandMenu;
 	};
-	const [resizeTrue, setResizeTrue] = React.useState(null);
 
 	const fakeDinamicIsland = () => {
 		if (resize) {
@@ -47,6 +47,7 @@ const Island = () => {
 				}}
 			>
 				<div className={dinamicMenuStateFunction()}>
+					<DinamicMounth />
 					<DinamicMenuBlock refFake={refFake} />
 					<div className={`${clas.timeCont} height-menu margin-bottom-1 `}>
 						<InputDefault placeHolder="Custom from (00.00)" />

@@ -49,6 +49,17 @@
 	position: absolute;
 	bottom: 100%;
 	overflow: auto;
+	scroll-margin: 4px;
+	&::-webkit-scrollbar {
+		width: 12px;
+		background: transparent;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		border: 4px solid #fff;
+		border-radius: 50px;
+		background: $gray2;
+	}
 	@media (height < 500px) {
 		max-height: 65vh;
 	}

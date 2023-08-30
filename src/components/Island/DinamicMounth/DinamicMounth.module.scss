@@ -1,0 +1,24 @@
+@use "../../../scss/utils" as *;
+@use "../../../scss/vars" as *;
+
+.mounth {
+	width: 100%;
+	border-radius: 40px;
+	padding: 2px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.arrow {
+	height: 100%;
+	aspect-ratio: 1;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50px;
+	img {
+		height: 38%;
+		pointer-events: none;
+	}
+}
