@@ -7,7 +7,7 @@ const InputCustom = () => {
 		<div
 			className={`${clas.wrapper} border-mini1 gray1-bg height-menu margin-bottom-1`}
 		>
-			<Rect color={"lightgray"} bd={1} />
+			<Rect color={"lightgray"} bd={1} regim="big" />
 			<input
 				placeholder="Create new titile"
 				className={`${clas.input} menu-size2 gray1-bg`}
