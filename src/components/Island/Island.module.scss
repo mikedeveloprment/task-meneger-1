@@ -49,8 +49,8 @@
 	position: absolute;
 	bottom: 100%;
 	overflow: auto;
-	@media (width < 700px) {
-		max-height: 60vh;
+	@media (height < 500px) {
+		max-height: 65vh;
 	}
 }
 

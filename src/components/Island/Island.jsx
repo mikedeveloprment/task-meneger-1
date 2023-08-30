@@ -1,12 +1,14 @@
 import React, { useEffect } from "react";
 import clas from "./Island.module.scss";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import DinamicIsland from "../DinamicIsland/DinamicIsland";
 import DinamicMenuBlock from "./DinamicMenuBlock/DinamicMenuBlock";
 import InputDefault from "../InputDefault/InputDefault";
 import ButtonBig from "../ButtonBig/ButtonBig";
+import { clickResize } from "../../store/slices/tolBarSlice";
 
 const Island = () => {
+	const disp = useDispatch();
 	const { animClick, resize, border } = useSelector((state) => state.tolBar);
 	const refFake = React.useRef(null);
 	//
@@ -31,9 +33,9 @@ const Island = () => {
 		return "";
 	};
 
-	// React.useEffect(() => {
-	// 	window.addEventListener("resize", () => setResizeTrue());
-	// });
+	React.useEffect(() => {
+		window.addEventListener("resize", () => disp(clickResize(false)));
+	});
 
 	return (
 		<div className={wrapeprStateFunction()}>
