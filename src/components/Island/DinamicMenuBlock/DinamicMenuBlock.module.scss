@@ -36,8 +36,6 @@
 	width: 100%;
 	grid-auto-flow: column;
 	@include ad-value("gap", 7, 4, 0, 1600, 1);
-	@media (width > 1200px) {
-	}
 }
 
 .time {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import clas from "./Island.module.scss";
 import { useSelector } from "react-redux";
 import DinamicIsland from "../DinamicIsland/DinamicIsland";
@@ -19,6 +19,8 @@ const Island = () => {
 			return `${clas.dinamicIslandMenu} ${clas.dinamicIslandMenuActive}`;
 		return clas.dinamicIslandMenu;
 	};
+	const [resizeTrue, setResizeTrue] = React.useState(null);
+
 	const fakeDinamicIsland = () => {
 		if (resize) {
 			if (window.innerWidth >= 440) {
@@ -28,7 +30,10 @@ const Island = () => {
 		}
 		return "";
 	};
-	//
+
+	React.useEffect(() => {
+		window.addEventListener("resize", () => setResizeTrue(!resizeTrue));
+	});
 
 	return (
 		<div className={wrapeprStateFunction()}>
