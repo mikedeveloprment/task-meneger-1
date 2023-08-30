@@ -26,13 +26,9 @@ const Island = () => {
 	};
 
 	const fakeDinamicIsland = () => {
-		if (resize) {
-			if (window.innerWidth >= 440) {
-				return "calc(14vw + 250px)";
-			}
-			return "84%";
-		}
-		return "";
+		if (resize)
+			return `${clas.dinamicIslandCont} ${clas.dinamicIslandContResize}`;
+		return clas.dinamicIslandCont;
 	};
 
 	React.useEffect(() => {
@@ -41,13 +37,7 @@ const Island = () => {
 
 	return (
 		<div className={wrapeprStateFunction()}>
-			<div
-				ref={refFake}
-				className={clas.dinamicIslandCont}
-				style={{
-					width: fakeDinamicIsland(),
-				}}
-			>
+			<div ref={refFake} className={fakeDinamicIsland()}>
 				<div className={dinamicMenuStateFunction()}>
 					<InputCustom />
 					<RegimState />
