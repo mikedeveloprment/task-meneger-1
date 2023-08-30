@@ -31,9 +31,9 @@ const Island = () => {
 		return "";
 	};
 
-	React.useEffect(() => {
-		window.addEventListener("resize", () => setResizeTrue(!resizeTrue));
-	});
+	// React.useEffect(() => {
+	// 	window.addEventListener("resize", () => setResizeTrue());
+	// });
 
 	return (
 		<div className={wrapeprStateFunction()}>
