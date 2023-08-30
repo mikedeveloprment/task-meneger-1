@@ -2,6 +2,6 @@
 @use "../../scss/vars" as *;
 
 .hoursInput {
-	flex: 1 auto;
+	width: 60%;
 	@include ad-value("padding", 12, 10, 0, 1600, 1);
 }
