@@ -18,6 +18,7 @@
 	align-items: center;
 	border-radius: 50px;
 	img {
+		transform: translateX(1px);
 		height: 38%;
 		pointer-events: none;
 	}
