@@ -24,7 +24,7 @@ const Island = () => {
 			if (window.innerWidth >= 440) {
 				return "calc(14vw + 250px)";
 			}
-			return "100%";
+			return "84%";
 		}
 		return "";
 	};

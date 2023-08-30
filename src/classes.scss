@@ -35,7 +35,12 @@
 .height-menu {
 	@include ad-value("height", 37, 34, 0, 1600, 1);
 }
-
+.height-menu-time {
+	@include ad-value("height", 37, 34, 0, 1600, 1);
+	@media (width < 600px) {
+		@include ad-value("height", 33, 30, 0, 1600, 1);
+	}
+}
 .margin-bottom-1 {
 	@include ad-value("margin-bottom", 7, 5, 0, 1600, 1);
 }

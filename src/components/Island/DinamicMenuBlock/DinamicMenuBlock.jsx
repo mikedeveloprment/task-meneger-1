@@ -27,8 +27,8 @@ const DinamicMenuBlock = ({ refFake }) => {
 					<span
 						className={
 							arrayActiveTime.includes(index)
-								? `${clas.time}  menu-size1`
-								: `${clas.time} ${clas.timeOk} menu-size1`
+								? `${clas.time}  menu-size1 height-menu-time`
+								: `${clas.time} ${clas.timeOk} menu-size1 height-menu-time `
 						}
 						key={index}
 					>
