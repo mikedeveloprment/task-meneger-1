@@ -1,0 +1,65 @@
+@use "../../../scss/utils" as *;
+@use "../../../scss/vars" as *;
+
+.dinamicBlockSelect {
+	width: 100%;
+}
+
+.activeTime {
+	width: 100%;
+	border-radius: 40px;
+	padding: 2px;
+	border: 2px solid $gray1;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.selectTime {
+	height: 100%;
+	border-radius: 40px;
+	width: 43%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.defis {
+	transform: scaleX(1.8) scaleY(1.8);
+	color: gray;
+}
+
+.timeList {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(6, 1fr);
+	width: 100%;
+	grid-auto-flow: column;
+	@include ad-value("gap", 7, 4, 0, 1600, 1);
+	@media (width > 1200px) {
+		.time {
+			aspect-ratio: 70/28;
+		}
+	}
+}
+
+.time {
+	background: #000;
+	color: #fff;
+	display: block;
+	height: 100%;
+	width: 100%;
+	max-height: 35px;
+	aspect-ratio: 70/30;
+	background: $blue2;
+	color: $blue1;
+	border-radius: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.timeOk {
+	background: $gray1;
+	color: gray;
+}
