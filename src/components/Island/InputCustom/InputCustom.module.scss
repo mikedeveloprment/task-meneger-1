@@ -3,7 +3,6 @@
 
 .wrapper {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
 }
 
@@ -17,7 +16,6 @@
 	justify-content: center;
 	background: #000;
 	height: 100%;
-	overflow: hidden;
 	align-items: center;
 	@include ad-value("padding", 8, 6, 0, 1600, 1);
 	position: relative;
