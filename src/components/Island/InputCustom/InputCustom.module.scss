@@ -7,10 +7,12 @@
 	align-items: center;
 }
 
+.input {
+	height: 100%;
+}
 .cont {
-	flex: 1 100%;
 	display: flex;
-	justify-content: flex-end;
+	justify-content: center;
 	height: 100%;
 	overflow: hidden;
 	align-items: center;
