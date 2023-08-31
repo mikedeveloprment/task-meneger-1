@@ -31,13 +31,9 @@ const Island = () => {
 		return clas.dinamicIslandCont;
 	};
 
-	React.useEffect(() => {
-		window.addEventListener("resize", () => disp(clickResize(false)));
-	});
-
 	return (
 		<div className={wrapeprStateFunction()}>
-			<div ref={refFake} className={fakeDinamicIsland()}>
+			<div className={fakeDinamicIsland()}>
 				<div className={dinamicMenuStateFunction()}>
 					<InputCustom />
 					<RegimState />

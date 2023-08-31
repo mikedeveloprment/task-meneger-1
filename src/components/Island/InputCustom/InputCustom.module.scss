@@ -3,4 +3,31 @@
 
 .wrapper {
 	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.cont {
+	flex: 1 100%;
+	display: flex;
+	justify-content: flex-end;
+	height: 100%;
+	overflow: hidden;
+	align-items: center;
+	@include ad-value("padding", 8, 6, 0, 1600, 1);
+}
+.tag {
+	height: 100%;
+	display: flex;
+	white-space: nowrap;
+	justify-content: center;
+	@include ad-value("padding", 10, 8, 0, 1600, 1);
+	align-items: center;
+	border-radius: 20px;
+	overflow: hidden;
+	background: #fff;
+	color: gray;
+	transition: ease 0.4s;
+	transform: tanslateX(14px);
+	transform-origin: center right;
 }
