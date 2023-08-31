@@ -4,13 +4,13 @@
 .wrapper {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 }
 
 .input {
+	flex: 1 auto;
 	height: 100%;
-	z-index: 9;
 	background: #000;
-	position: relative;
 }
 .cont {
 	display: flex;
@@ -19,8 +19,6 @@
 	height: 100%;
 	align-items: center;
 	@include ad-value("padding", 8, 6, 0, 1600, 1);
-	position: relative;
-	z-index: 10;
 }
 .tag {
 	height: 100%;
