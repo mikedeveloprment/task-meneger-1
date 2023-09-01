@@ -62,8 +62,8 @@
 
 .height-menu-time {
 	@include ad-value("font-size", 11, 9, 0, 1600, 1);
-	@include ad-value("height", 37, 31, 0, 1600, 1);
-	@include ad-value("letter-spacing", 0.4, 0.15, 0, 1600, 1);
+	@include ad-value("height", 37, 30.5, 0, 1600, 1);
+	// @include ad-value("letter-spacing", 0.4, 0.15, 0, 1600, 1);
 	font-weight: 500;
 	@media (width < 600px) {
 		@include ad-value("height", 33, 30, 0, 1600, 1);
