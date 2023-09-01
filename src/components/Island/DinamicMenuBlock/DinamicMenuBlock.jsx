@@ -1,27 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import clas from "./DinamicMenuBlock.module.scss";
 import { useDispatch, useSelector } from "react-redux";
 import {
 	setTimeComplitionEnd,
 	setTimeComplitionFrom,
 } from "../../../store/slices/taskInfoCreateSlice";
+import DinamicMounth from "../DinamicMounth/DinamicMounth";
 
 const DinamicMenuBlock = () => {
 	const disp = useDispatch();
-	const { timeComplitionFrom = 0, timeComplitionEnd } = useSelector(
+	const { timeComplitionFrom, timeComplitionEnd } = useSelector(
 		(state) => state.taskInfo
 	);
+	const regim = useSelector((state) => state.tolBar.regimIslandMenu);
 	const arr1 = [...Array(24)].map((u, i) => i);
-	const arraySelectTime = ["09.00", "-", "14.00"];
-	// const arrayActiveTime = [8, 13, 14, 9, 10, 11, 12];
 	const arrayInActiveTime = [1, 23, 18];
-	// //
-	// const selectTimeStateFunction = (item) => {
-	// 	if (item === "-") {
-	// 		return `${clas.defis} `;
-	// 	}
-	// 	return `${clas.selectTime} blue2-bg blue1-co`;
-	// };
 
 	console.log(timeComplitionEnd);
 	const timeTagDisabledFunction = (index) => {
@@ -64,35 +57,49 @@ const DinamicMenuBlock = () => {
 			return disp(setTimeComplitionFrom(index));
 		}
 	};
-
 	const string = (index) => {
 		if (index < 8) {
 			return `0${index + 1}.00`;
 		}
 		return `${index + 1}.00`;
 	};
+	const dinamicBlockStateFunction = () => {
+		if (regim === 2) {
+			return ` ${clas.dinamicBlock} ${clas.dinamicBlockNotes} margin-bottom-1`;
+		}
+		return ` ${clas.dinamicBlock} ${clas.dinamicBlockTime} margin-bottom-12`;
+	};
 	//
 
 	return (
-		<div className={`${clas.dinamicBlockSelect} margin-bottom-12`}>
-			{/* <div className={`${clas.activeTime} height-menu`}>
-				{arraySelectTime.map((item, index) => (
-					<span key={index} className={selectTimeStateFunction(item)}>
-						{item}
-					</span>
-				))}
-			</div> */}
-			<div className={clas.timeList}>
-				{arr1.map((_, index) => (
-					<span
-						onClick={() => timeTagOnClickFunction(index + 1)}
-						className={timeTagDisabledFunction(index + 1)}
-						key={index}
-					>
-						{string(index)}
-					</span>
-				))}
-			</div>
+		<div className={dinamicBlockStateFunction()}>
+			{regim === 2 ? (
+				<div className={clas.notesBlock}>
+					<textarea
+						className={`${clas.textArea} gray1-bg border-mini1 menu-size1`}
+					/>
+				</div>
+			) : (
+				""
+			)}
+			{regim === 1 ? (
+				<>
+					<DinamicMounth />
+					<div className={clas.timeList}>
+						{arr1.map((_, index) => (
+							<span
+								onClick={() => timeTagOnClickFunction(index + 1)}
+								className={timeTagDisabledFunction(index + 1)}
+								key={index}
+							>
+								{string(index)}
+							</span>
+						))}
+					</div>
+				</>
+			) : (
+				""
+			)}
 		</div>
 	);
 };

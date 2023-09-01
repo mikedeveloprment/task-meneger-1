@@ -27,7 +27,7 @@
 	display: flex;
 	background: #fff;
 	justify-content: center;
-	transition: ease 0.6s;
+	transition: ease-in-out 0.4s;
 	align-items: center;
 	svg {
 		pointer-events: none;
@@ -37,7 +37,7 @@
 
 .buttonRegimActive {
 	box-shadow: 0px 0px 0px 0px rgb(255, 255, 255) inset;
-	background: $black1;
+	background: $gray2;
 }
 
 .contIcon {

@@ -34,7 +34,6 @@ const Island = () => {
 				<div className={dinamicMenuStateFunction()}>
 					<InputCustom />
 					<RegimState />
-					<DinamicMounth />
 					<DinamicMenuBlock refFake={refFake} />
 					<ButtonBig
 						text="Set Date"

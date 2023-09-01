@@ -4,7 +4,9 @@ import clas from "./DinamicMounth.module.scss";
 
 const DinamicMounth = () => {
 	return (
-		<div className={`${clas.mounth} height-menu blue2-bg menu-size2 blue1-co `}>
+		<div
+			className={`${clas.mounth} height-menu blue2-bg menu-size2 blue1-co margin-bottom-1 `}
+		>
 			<button className={clas.arrow}>
 				<img
 					src={right}
