@@ -8,7 +8,7 @@ import {
 
 const DinamicMenuBlock = () => {
 	const disp = useDispatch();
-	const { timeComplitionFrom, timeComplitionEnd } = useSelector(
+	const { timeComplitionFrom = 0, timeComplitionEnd } = useSelector(
 		(state) => state.taskInfo
 	);
 	const arr1 = [...Array(24)].map((u, i) => i);
@@ -23,8 +23,14 @@ const DinamicMenuBlock = () => {
 	// 	return `${clas.selectTime} blue2-bg blue1-co`;
 	// };
 
+	console.log(timeComplitionEnd);
 	const timeTagDisabledFunction = (index) => {
-		if (arrayInActiveTime.includes(index)) {
+		if (
+			arrayInActiveTime.includes(index) ||
+			index < timeComplitionFrom ||
+			(index != (timeComplitionEnd == "" ? index : timeComplitionEnd) &&
+				index != (timeComplitionFrom == "" ? index : timeComplitionFrom))
+		) {
 			return `${clas.time} ${clas.timeOk}  height-menu-time `;
 		}
 		if (timeComplitionFrom == index || timeComplitionEnd == index) {
@@ -58,7 +64,6 @@ const DinamicMenuBlock = () => {
 			return disp(setTimeComplitionFrom(index));
 		}
 	};
-	console.log(timeComplitionFrom, timeComplitionEnd);
 
 	const string = (index) => {
 		if (index < 8) {
