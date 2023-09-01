@@ -21,7 +21,9 @@
 	height: 160px;
 }
 .textArea {
-	color: gray;
+	@include ad-value("padding", 12, 10, 0, 1600, 1);
+	@include ad-value("padding-top", 9, 7, 0, 1600, 1);
+	color: $gray2;
 	width: 100%;
 	height: 100%;
 	resize: none;
