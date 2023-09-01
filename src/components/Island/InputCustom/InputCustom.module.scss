@@ -6,10 +6,12 @@
 	align-items: center;
 	position: relative;
 	justify-content: space-between;
+	width: 100%;
 }
 
 .input {
 	flex: 1 auto;
+	width: 100%;
 	height: 100%;
 }
 .cont {
@@ -18,7 +20,7 @@
 	justify-content: center;
 	height: 100%;
 	align-items: center;
-	@include ad-value("padding", 8, 6, 0, 1600, 1);
+	padding: 6px;
 	position: absolute;
 }
 .tag {
@@ -26,13 +28,9 @@
 	display: flex;
 	white-space: nowrap;
 	justify-content: center;
-	@include ad-value("padding", 10, 8, 0, 1600, 1);
+	@include ad-value("padding", 12, 11, 0, 1600, 1);
 	align-items: center;
 	border-radius: 20px;
-	overflow: hidden;
 	background: #fff;
 	color: gray;
-	transition: ease 0.4s;
-	transform: tanslateX(14px);
-	transform-origin: center right;
 }

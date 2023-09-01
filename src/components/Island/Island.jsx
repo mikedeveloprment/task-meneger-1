@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import clas from "./Island.module.scss";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import DinamicIsland from "../DinamicIsland/DinamicIsland";
 import DinamicMenuBlock from "./DinamicMenuBlock/DinamicMenuBlock";
 import ButtonBig from "../ButtonBig/ButtonBig";

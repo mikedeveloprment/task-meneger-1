@@ -1,8 +1,6 @@
 import React from "react";
 import clas from "./RegimState.module.scss";
-import calendar from "../../../assets/calendar.svg";
-import notes from "../../../assets/notes.svg";
-import arrow from "../.../../../../assets/arrow-right.svg";
+import arrow from "../../../assets/arrow-right.svg";
 import Rect from "../../Rect/Rect";
 
 const RegimState = () => {
@@ -12,7 +10,7 @@ const RegimState = () => {
 	const buttonStateFunction = (butt) => {
 		if (butt)
 			return `${clas.buttonRegim} ${clas.buttonRegimActive} margin-right-1 border-mini1`;
-		return `${clas.buttonRegim} margin-right-1 border-mini1`;
+		return `${clas.buttonRegim} border-mini1`;
 	};
 
 	return (
@@ -26,7 +24,7 @@ const RegimState = () => {
 			</div>
 			<button
 				onClick={() => setStateButt1(!stateButt1)}
-				className={buttonStateFunction(stateButt1)}
+				className={`${buttonStateFunction(stateButt2)} margin-right-1`}
 			>
 				<svg
 					width="24"
@@ -80,10 +78,10 @@ const RegimState = () => {
 				</svg>
 			</button>
 			<button
+				className={buttonStateFunction(stateButt1)}
 				onClick={() => {
 					setStateButt2(!stateButt2);
 				}}
-				className={buttonStateFunction(stateButt2)}
 			>
 				<svg
 					width="24"

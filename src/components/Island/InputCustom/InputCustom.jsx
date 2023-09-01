@@ -15,9 +15,9 @@ const InputCustom = () => {
 			<Rect color={"lightgray"} bd={1} regim="big" />
 			<input
 				placeholder="Create new titile"
-				className={`${clas.input} menu-size1 gray1-bg`}
+				className={`${clas.input} menu-size1 gray1-bg border-mini1`}
 			/>
-			<div className={`${clas.cont} menu-size3`}>
+			<div className={`${clas.cont} menu-size3 `}>
 				<span className={clas.tag}>
 					{timeComplitionFrom
 						? timeComplitionFrom >= 12
