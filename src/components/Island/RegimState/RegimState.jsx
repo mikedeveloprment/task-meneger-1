@@ -4,12 +4,12 @@ import arrow from "../../../assets/arrow-right.svg";
 import Rect from "../../Rect/Rect";
 
 const RegimState = () => {
-	const [stateButt1, setStateButt1] = React.useState();
-	const [stateButt2, setStateButt2] = React.useState();
+	const [stateButt1, setStateButt1] = React.useState(false);
+	const [stateButt2, setStateButt2] = React.useState(false);
 
 	const buttonStateFunction = (butt) => {
 		if (butt)
-			return `${clas.buttonRegim} ${clas.buttonRegimActive} margin-right-1 border-mini1`;
+			return `${clas.buttonRegim} ${clas.buttonRegimActive}  border-mini1`;
 		return `${clas.buttonRegim} border-mini1`;
 	};
 
@@ -24,7 +24,7 @@ const RegimState = () => {
 			</div>
 			<button
 				onClick={() => setStateButt1(!stateButt1)}
-				className={`${buttonStateFunction(stateButt2)} margin-right-1`}
+				className={`${buttonStateFunction(stateButt1)} margin-right-1`}
 			>
 				<svg
 					width="24"
@@ -78,7 +78,7 @@ const RegimState = () => {
 				</svg>
 			</button>
 			<button
-				className={buttonStateFunction(stateButt1)}
+				className={buttonStateFunction(stateButt2)}
 				onClick={() => {
 					setStateButt2(!stateButt2);
 				}}

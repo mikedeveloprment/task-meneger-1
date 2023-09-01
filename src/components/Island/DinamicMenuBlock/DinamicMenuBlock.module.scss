@@ -54,7 +54,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	transition: 0.3s $ease-info-mini;
+	transition: 0.3s ease-in-out;
 	cursor: default;
 	@media (any-hover: hover) {
 		cursor: pointer;
