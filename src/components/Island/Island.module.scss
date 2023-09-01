@@ -53,7 +53,7 @@
 	will-change: transform;
 	flex-direction: column;
 	@include ad-value("padding", 7, 5, 0, 1600, 1);
-	transform: translateY(30px);
+	transform: translateY(15px);
 	position: absolute;
 	bottom: 100%;
 	overflow: auto;
