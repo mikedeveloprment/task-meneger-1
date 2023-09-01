@@ -1,7 +1,7 @@
 import React from "react";
 import clas from "./Rect.module.scss";
 
-const Rect = ({ color = "#000", bd = 1.5, regim = "medium" }) => {
+const Rect = ({ color = "#000", bd = 1.1, regim = "medium" }) => {
 	const rectWidthFunction = () => {
 		if (regim === "big") return "52%";
 		if (regim === "medium") return "48%";
