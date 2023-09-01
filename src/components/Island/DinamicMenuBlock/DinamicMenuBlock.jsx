@@ -14,17 +14,17 @@ const DinamicMenuBlock = () => {
 	const arr1 = [...Array(24)].map((u, i) => i);
 	const arraySelectTime = ["09.00", "-", "14.00"];
 	// const arrayActiveTime = [8, 13, 14, 9, 10, 11, 12];
-	const arrayActiveTime = [1, 23, 18];
-	//
-	const selectTimeStateFunction = (item) => {
-		if (item === "-") {
-			return `${clas.defis} `;
-		}
-		return `${clas.selectTime} blue2-bg blue1-co`;
-	};
+	const arrayInActiveTime = [1, 23, 18];
+	// //
+	// const selectTimeStateFunction = (item) => {
+	// 	if (item === "-") {
+	// 		return `${clas.defis} `;
+	// 	}
+	// 	return `${clas.selectTime} blue2-bg blue1-co`;
+	// };
 
 	const timeTagDisabledFunction = (index) => {
-		if (arrayActiveTime.includes(index)) {
+		if (arrayInActiveTime.includes(index)) {
 			return `${clas.time} ${clas.timeOk}  height-menu-time `;
 		}
 		if (timeComplitionFrom == index || timeComplitionEnd == index) {
@@ -70,13 +70,13 @@ const DinamicMenuBlock = () => {
 
 	return (
 		<div className={`${clas.dinamicBlockSelect} margin-bottom-12`}>
-			<div className={`${clas.activeTime} height-menu margin-bottom-1`}>
+			{/* <div className={`${clas.activeTime} height-menu`}>
 				{arraySelectTime.map((item, index) => (
 					<span key={index} className={selectTimeStateFunction(item)}>
 						{item}
 					</span>
 				))}
-			</div>
+			</div> */}
 			<div className={clas.timeList}>
 				{arr1.map((_, index) => (
 					<span
