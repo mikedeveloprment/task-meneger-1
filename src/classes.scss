@@ -49,20 +49,22 @@
 }
 .menu-size1 {
 	font-weight: 500;
-	@include ad-value("font-size", 11.6, 9.2, 0, 1600, 1);
+	@include ad-value("font-size", 12, 10.4, 0, 1600, 1);
 }
-
+.menu-size2 {
+	font-weight: 500;
+	@include ad-value("font-size", 11.4, 9.6, 0, 1600, 1);
+}
 .menu-size3 {
 	font-weight: 500;
-	@include ad-value("font-size", 9.5, 8.3, 0, 1600, 1);
+	@include ad-value("font-size", 10, 9, 0, 1600, 1);
 }
 
 .height-menu-time {
-	@include ad-value("font-size", 11, 10, 0, 1600, 1);
+	@include ad-value("font-size", 11, 9, 0, 1600, 1);
 	@include ad-value("height", 37, 34, 0, 1600, 1);
 	font-weight: 500;
 	@media (width < 600px) {
-		@include ad-value("font-size", 10, 8.6, 0, 1600, 1);
 		@include ad-value("height", 33, 30, 0, 1600, 1);
 	}
 }
