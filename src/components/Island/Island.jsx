@@ -38,7 +38,7 @@ const Island = () => {
 					<InputCustom />
 					<RegimState />
 					<DinamicMounth />
-					{/* <DinamicMenuBlock refFake={refFake} /> */}
+					<DinamicMenuBlock refFake={refFake} />
 					<div className={`${clas.timeCont} height-menu margin-bottom-1 `}>
 						<InputDefault placeHolder="Custom from (00.00)" />
 						<InputDefault placeHolder="Custom until (00.00)" />

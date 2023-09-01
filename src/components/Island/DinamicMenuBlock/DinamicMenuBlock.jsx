@@ -18,19 +18,19 @@ const DinamicMenuBlock = () => {
 	//
 	const selectTimeStateFunction = (item) => {
 		if (item === "-") {
-			return `${clas.defis} menu-size1 `;
+			return `${clas.defis} `;
 		}
-		return `${clas.selectTime} menu-size1 blue2-bg blue1-co`;
+		return `${clas.selectTime} blue2-bg blue1-co`;
 	};
 
 	const timeTagDisabledFunction = (index) => {
 		if (arrayActiveTime.includes(index)) {
-			return `${clas.time} ${clas.timeOk} menu-size1 height-menu-time `;
+			return `${clas.time} ${clas.timeOk}  height-menu-time `;
 		}
 		if (timeComplitionFrom == index || timeComplitionEnd == index) {
-			return `${clas.time}  menu-size1 height-menu-time blue1-bg white-co`;
+			return `${clas.time}   height-menu-time blue1-bg white-co`;
 		}
-		return `${clas.time}  menu-size1 height-menu-time`;
+		return `${clas.time}   height-menu-time`;
 	};
 	const timeTagOnClickFunction = (index) => {
 		if (timeComplitionFrom === "" && timeComplitionEnd !== index) {
