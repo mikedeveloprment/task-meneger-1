@@ -53,7 +53,7 @@
 }
 .menu-size2 {
 	font-weight: 500;
-	@include ad-value("font-size", 10.7, 9.45, 0, 1600, 1);
+	@include ad-value("font-size", 10.8, 9.45, 0, 1600, 1);
 }
 .menu-size2-resize {
 	font-weight: 500;
@@ -66,11 +66,11 @@
 
 .height-menu-time {
 	@include ad-value("height", 33, 28, 0, 1600, 1);
-	@include ad-value("font-size", 10.2, 8.9, 0, 1600, 1);
+	@include ad-value("font-size", 10.4, 8.9, 0, 1600, 1);
 	font-weight: 500;
 }
 .size-menu-time1 {
-	@include ad-value("font-size", 10.6, 9.2, 0, 1600, 1);
+	@include ad-value("font-size", 10.8, 9.2, 0, 1600, 1);
 }
 .border-mini1 {
 	@include ad-value("border-radius", 6, 8, 0, 1600, 1);

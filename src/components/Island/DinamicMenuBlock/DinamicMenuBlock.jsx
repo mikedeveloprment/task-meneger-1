@@ -70,39 +70,41 @@ const DinamicMenuBlock = () => {
 		if (regim === 2) {
 			return ` ${clas.dinamicBlock} ${clas.dinamicBlockNotes} margin-bottom-1`;
 		}
-		return ` ${clas.dinamicBlock} ${clas.dinamicBlockTime} margin-bottom-12`;
+		return ` ${clas.dinamicBlock} margin-bottom-12`;
+	};
+	const textAreaStateFunction = () => {
+		if (regim === 2) {
+			return `${clas.notesBlock} ${clas.notesBlockActive}`;
+		}
+		return clas.notesBlock;
+	};
+	const timesStateFunction = () => {
+		if (regim === 2) {
+			return `${clas.timeList} ${clas.timeListActive}`;
+		}
+		return clas.timeList;
 	};
 	//
 
 	return (
 		<div className={dinamicBlockStateFunction()}>
-			{regim === 2 ? (
-				<div className={clas.notesBlock}>
-					<textarea
-						className={`${clas.textArea} gray1-bg border-mini1 menu-size1`}
-					/>
-				</div>
-			) : (
-				""
-			)}
-			{regim === 1 ? (
-				<>
-					<DinamicMounth />
-					<div className={clas.timeList}>
-						{arr1.map((_, index) => (
-							<span
-								onClick={() => timeTagOnClickFunction(index + 1)}
-								className={timeTagDisabledFunction(index + 1)}
-								key={index}
-							>
-								{string(index)}
-							</span>
-						))}
-					</div>
-				</>
-			) : (
-				""
-			)}
+			<div className={textAreaStateFunction()}>
+				<textarea
+					className={`${clas.textArea} gray1-bg border-mini1 menu-size1`}
+				/>
+			</div>
+			<DinamicMounth />
+			<div className={timesStateFunction()}>
+				{arr1.map((_, index) => (
+					<span
+						onClick={() => timeTagOnClickFunction(index + 1)}
+						className={timeTagDisabledFunction(index + 1)}
+						key={index}
+					>
+						{string(index)}
+					</span>
+				))}
+			</div>
 		</div>
 	);
 };
