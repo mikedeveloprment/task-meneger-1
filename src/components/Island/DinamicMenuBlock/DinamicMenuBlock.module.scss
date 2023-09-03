@@ -61,7 +61,7 @@
 	grid-template-rows: repeat(6, 1fr);
 	width: 100%;
 	grid-auto-flow: column;
-	@include ad-value("gap", 7, 4, 0, 1600, 1);
+	@include ad-value("gap", 6, 5, 0, 1600, 1);
 }
 
 .time {

@@ -33,7 +33,7 @@
 }
 
 .height-menu {
-	@include ad-value("height", 35, 35.4, 0, 1600, 1);
+	@include ad-value("height", 36, 35.4, 0, 1600, 1);
 }
 
 .margin-bottom-1 {
@@ -44,12 +44,12 @@
 }
 
 .margin-bottom-12 {
-	@include ad-value("margin-bottom", 12, 10, 0, 1600, 1);
-	@include ad-value("margin-top", 12, 10, 0, 1600, 1);
+	@include ad-value("margin-bottom", 13, 9, 0, 1600, 1);
+	@include ad-value("margin-top", 13, 9, 0, 1600, 1);
 }
 .menu-size1 {
 	font-weight: 500;
-	@include ad-value("font-size", 11, 10.3, 0, 1600, 1);
+	@include ad-value("font-size", 11.4, 10.3, 0, 1600, 1);
 }
 .menu-size2 {
 	font-weight: 500;
