@@ -90,6 +90,7 @@ const DinamicMenuBlock = () => {
 		<div className={dinamicBlockStateFunction()}>
 			<div className={textAreaStateFunction()}>
 				<textarea
+					placeholder="Add notes"
 					className={`${clas.textArea} gray1-bg border-mini1 menu-size1`}
 				/>
 			</div>

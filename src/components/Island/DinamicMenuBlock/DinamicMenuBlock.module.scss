@@ -35,11 +35,12 @@
 	height: 100%;
 	opacity: 0;
 	resize: none;
-	transition: 0.5s ease-in-out 0.2s;
+	transition: 0.5s ease-in-out 0s;
 }
 
 .notesBlockActive {
 	pointer-events: all;
+	transition: 0.5s ease-in-out 0.2s;
 
 	.textArea {
 		opacity: 1;
@@ -82,7 +83,7 @@
 	@include ad-value("gap", 6, 5, 0, 1600, 1);
 	opacity: 1;
 	@include ad-value("height", 228, 193, 0, 1600, 1);
-	transition: height 0.5s $ease-content, opacity 0.3s ease-in-out 0.25s;
+	transition: height 0.5s $ease-content 0.1s, opacity 0.3s ease-in-out 0.25s;
 }
 
 .timeListActive {
