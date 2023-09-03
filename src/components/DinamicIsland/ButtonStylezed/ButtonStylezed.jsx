@@ -9,13 +9,21 @@ const ButtonStylezed = () => {
 	const disp = useDispatch();
 	const { resize, border } = useSelector((state) => state.tolBar);
 
+	const borderClick = () => {
+		disp(clickBorder(!border));
+		localStorage.setItem("border", !border ? "1" : "");
+	};
+	const resizeClick = () => {
+		disp(clickResize(!resize));
+		localStorage.setItem("resize", !resize ? "1" : "");
+	};
 	return (
 		<>
 			<button
 				style={{
 					animationDelay: "0.8s",
 				}}
-				onClick={() => disp(clickBorder(!border))}
+				onClick={borderClick}
 				className={
 					border ? `${clas.button} ${clas.buttonActive}` : `${clas.button} `
 				}
@@ -39,7 +47,7 @@ const ButtonStylezed = () => {
 				style={{
 					animationDelay: "1s",
 				}}
-				onClick={() => disp(clickResize(!resize))}
+				onClick={resizeClick}
 				className={
 					resize ? `${clas.button} ${clas.buttonActive}` : `${clas.button} `
 				}

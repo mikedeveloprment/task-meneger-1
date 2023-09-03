@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import clas from "./DinamicIsland.module.scss";
 import Increment from "../Increment/Increment";
 import ButtonStylezed from "./ButtonStylezed/ButtonStylezed";

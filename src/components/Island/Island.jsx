@@ -1,17 +1,23 @@
 import React from "react";
 import clas from "./Island.module.scss";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import DinamicIsland from "../DinamicIsland/DinamicIsland";
 import DinamicMenuBlock from "./DinamicMenuBlock/DinamicMenuBlock";
 import ButtonBig from "../ButtonBig/ButtonBig";
-import DinamicMounth from "./DinamicMounth/DinamicMounth";
 import RegimState from "./RegimState/RegimState";
 import InputCustom from "./InputCustom/InputCustom";
+import { clickBorder, clickResize } from "../../store/slices/tolBarSlice";
 
 const Island = () => {
 	const { animClick, resize, border } = useSelector((state) => state.tolBar);
 	const refFake = React.useRef(null);
-	//
+
+	const disp = useDispatch();
+	React.useEffect(() => {
+		disp(clickBorder(Boolean(localStorage.getItem("border"))));
+		disp(clickResize(Boolean(localStorage.getItem("resize"))));
+	}, []);
+
 	const wrapeprStateFunction = () => {
 		if (border) return `${clas.wrapper} ${clas.wrapperPadding}`;
 		return clas.wrapper;

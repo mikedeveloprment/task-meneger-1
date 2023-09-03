@@ -16,7 +16,6 @@ const DinamicMenuBlock = () => {
 	const arr1 = [...Array(24)].map((u, i) => i);
 	const arrayInActiveTime = [1, 23, 18];
 
-	console.log(timeComplitionEnd);
 	const timeTagDisabledFunction = (index) => {
 		if (
 			arrayInActiveTime.includes(index) ||
@@ -24,12 +23,12 @@ const DinamicMenuBlock = () => {
 			(index != (timeComplitionEnd == "" ? index : timeComplitionEnd) &&
 				index != (timeComplitionFrom == "" ? index : timeComplitionFrom))
 		) {
-			return `${clas.time} ${clas.timeOk}  height-menu-time menu-size2`;
+			return `${clas.time} ${clas.timeOk}  height-menu-time `;
 		}
 		if (timeComplitionFrom == index || timeComplitionEnd == index) {
-			return `${clas.time}   height-menu-time blue1-bg white-co menu-size2`;
+			return `${clas.time}   height-menu-time blue1-bg white-co`;
 		}
-		return `${clas.time}   height-menu-time menu-size2`;
+		return `${clas.time}   height-menu-time`;
 	};
 	const timeTagOnClickFunction = (index) => {
 		if (timeComplitionFrom === "" && timeComplitionEnd !== index) {
