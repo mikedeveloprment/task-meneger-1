@@ -24,12 +24,12 @@ const DinamicMenuBlock = () => {
 			(index != (timeComplitionEnd == "" ? index : timeComplitionEnd) &&
 				index != (timeComplitionFrom == "" ? index : timeComplitionFrom))
 		) {
-			return `${clas.time} ${clas.timeOk}  height-menu-time `;
+			return `${clas.time} ${clas.timeOk}  height-menu-time menu-size2`;
 		}
 		if (timeComplitionFrom == index || timeComplitionEnd == index) {
-			return `${clas.time}   height-menu-time blue1-bg white-co`;
+			return `${clas.time}   height-menu-time blue1-bg white-co menu-size2`;
 		}
-		return `${clas.time}   height-menu-time`;
+		return `${clas.time}   height-menu-time menu-size2`;
 	};
 	const timeTagOnClickFunction = (index) => {
 		if (timeComplitionFrom === "" && timeComplitionEnd !== index) {
