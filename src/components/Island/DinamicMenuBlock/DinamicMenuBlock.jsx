@@ -15,6 +15,7 @@ const DinamicMenuBlock = () => {
 	const regim = useSelector((state) => state.tolBar.regimIslandMenu);
 	const arr1 = [...Array(24)].map((u, i) => i);
 	const arrayInActiveTime = [1, 23, 18];
+	const { resize } = useSelector((state) => state.tolBar);
 
 	const timeTagDisabledFunction = (index) => {
 		if (
@@ -27,6 +28,9 @@ const DinamicMenuBlock = () => {
 		}
 		if (timeComplitionFrom == index || timeComplitionEnd == index) {
 			return `${clas.time}   height-menu-time blue1-bg white-co`;
+		}
+		if (resize) {
+			return `${clas.time}   height-menu-time size-menu-time1 `;
 		}
 		return `${clas.time}   height-menu-time`;
 	};
