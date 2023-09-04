@@ -29,3 +29,12 @@ input {
 * {
 	cursor: initial;
 }
+
+.pages__container {
+	@include ad-value("padding", 20, 14, 0, 1600, 1);
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

@@ -24,15 +24,13 @@ const DinamicMenuBlock = () => {
 			(index != (timeComplitionEnd == "" ? index : timeComplitionEnd) &&
 				index != (timeComplitionFrom == "" ? index : timeComplitionFrom))
 		) {
-			return `${clas.time} ${clas.timeOk}  height-menu-time `;
+			return `${clas.time} ${clas.timeOk}  height_2 size_4`;
 		}
 		if (timeComplitionFrom == index || timeComplitionEnd == index) {
-			return `${clas.time}   height-menu-time blue1-bg white-co`;
+			return `${clas.time}   height_2 size_4 blue1-bg white-co`;
 		}
-		if (resize) {
-			return `${clas.time}   height-menu-time size-menu-time1 `;
-		}
-		return `${clas.time}   height-menu-time`;
+
+		return `${clas.time}   height_2 size_4`;
 	};
 	const timeTagOnClickFunction = (index) => {
 		if (timeComplitionFrom === "" && timeComplitionEnd !== index) {
@@ -70,7 +68,7 @@ const DinamicMenuBlock = () => {
 		if (regim === 2) {
 			return ` ${clas.dinamicBlock} ${clas.dinamicBlockNotes} margin-bottom-1`;
 		}
-		return ` ${clas.dinamicBlock} margin-bottom-12`;
+		return ` ${clas.dinamicBlock} mg_bt_1`;
 	};
 	const textAreaStateFunction = () => {
 		if (regim === 2) {
@@ -91,7 +89,7 @@ const DinamicMenuBlock = () => {
 			<div className={textAreaStateFunction()}>
 				<textarea
 					placeholder="Add notes"
-					className={`${clas.textArea} gray1-bg border-mini1 menu-size1`}
+					className={`${clas.textArea} gray1-bg border-mini1 size_1`}
 				/>
 			</div>
 			<DinamicMounth />

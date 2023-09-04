@@ -1,6 +1,7 @@
 import Island from "./components/Island/Island";
 import imports from "./imports";
 import "./imports";
+import Items from "./pages/Items/Items";
 
 const router = imports.createBrowserRouter([
 	{
@@ -8,6 +9,9 @@ const router = imports.createBrowserRouter([
 		element: (
 			<div className="wrapper gray1-bg">
 				<Island />
+				<div className="pages__container">
+					<Items />
+				</div>
 			</div>
 		),
 	},

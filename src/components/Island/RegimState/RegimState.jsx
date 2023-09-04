@@ -16,17 +16,17 @@ const RegimState = () => {
 	};
 
 	return (
-		<div className={`${clas.regim} height-menu margin-bottom-1`}>
-			<div className={`${clas.selectList} margin-right-1 border-mini1`}>
+		<div className={`${clas.regim} height_1 margin-bottom-1`}>
+			<div className={`${clas.selectList} mg_r_1 border-mini1`}>
 				<Rect />
-				<p className={` menu-size1 ${clas.text}`}>No List</p>
+				<p className={` size_1 ${clas.text}`}>No List</p>
 				<button className={clas.contIcon}>
 					<img src={arrow} />
 				</button>
 			</div>
 			<button
 				onClick={() => disp(setRegim(1))}
-				className={`${buttonStateFunction(1)} margin-right-1`}
+				className={`${buttonStateFunction(1)} mg_r_1`}
 			>
 				<svg
 					width="24"

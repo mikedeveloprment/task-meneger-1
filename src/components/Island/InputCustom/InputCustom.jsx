@@ -1,23 +1,27 @@
 import React from "react";
 import clas from "./InputCustom.module.scss";
 import Rect from "../../Rect/Rect";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { setValue } from "../../../store/slices/taskInfoCreateSlice";
 
 const InputCustom = () => {
-	const { timeComplitionFrom, timeComplitionEnd } = useSelector(
+	const { timeComplitionFrom, timeComplitionEnd, text } = useSelector(
 		(state) => state.taskInfo
 	);
+	const disp = useDispatch();
 
 	return (
-		<div
-			className={`${clas.wrapper} border-mini1 gray1-bg height-menu margin-bottom-1`}
-		>
+		<div className={`${clas.wrapper} border-mini1 gray1-bg height_1 mg_b_1`}>
 			<Rect color={"lightgray"} bd={1} regim="big" />
 			<input
+				onChange={(e) => {
+					disp(setValue(e.target.value));
+				}}
+				value={text}
 				placeholder="Create new titile"
-				className={`${clas.input} menu-size1 gray1-bg border-mini1`}
+				className={`${clas.input} size_1 gray1-bg border-mini1`}
 			/>
-			<div className={`${clas.cont} menu-size3 `}>
+			<div className={`${clas.cont} size_3 `}>
 				<span className={clas.tag}>
 					{timeComplitionFrom
 						? timeComplitionFrom >= 12

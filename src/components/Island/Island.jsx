@@ -7,6 +7,7 @@ import ButtonBig from "../ButtonBig/ButtonBig";
 import RegimState from "./RegimState/RegimState";
 import InputCustom from "./InputCustom/InputCustom";
 import { clickBorder, clickResize } from "../../store/slices/tolBarSlice";
+import { setItem } from "../../store/slices/taskInfoCreateSlice";
 
 const Island = () => {
 	const { animClick, resize, border } = useSelector((state) => state.tolBar);
@@ -34,6 +35,10 @@ const Island = () => {
 		return clas.dinamicIslandCont;
 	};
 
+	const clickCreate = () => {
+		disp(setItem());
+	};
+
 	return (
 		<div className={wrapeprStateFunction()}>
 			<div className={fakeDinamicIsland()}>
@@ -42,12 +47,13 @@ const Island = () => {
 					<RegimState />
 					<DinamicMenuBlock refFake={refFake} />
 					<ButtonBig
+						onCLickButton={clickCreate}
 						text="Set Date"
-						anotherStyles="height-menu margin-bottom-1 menu-size1 blue2-bg  blue1-co"
+						anotherStyles="height_1 size_1 mg_b_1 blue2-bg  blue1-co"
 					/>
 					<ButtonBig
 						text="Create"
-						anotherStyles="height-menu  menu-size1 blue1-bg white-co"
+						anotherStyles="height_1 size_1 blue1-bg white-co"
 					/>
 				</div>
 				<DinamicIsland textValue="Create new task" />
