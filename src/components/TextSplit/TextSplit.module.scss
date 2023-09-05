@@ -2,6 +2,7 @@
 @use "../../scss/vars" as *;
 
 .text {
+	@include ad-value("font-size", 13, 11.5, 0, 1600, 1);
 	flex: 1 auto;
 	display: flex;
 	align-items: center;
@@ -19,7 +20,6 @@
 	transform: translateY(-150%);
 	opacity: 0;
 	animation: text-preload 0.7s forwards;
-	font-weight: 400 !important;
 	animation-timing-function: $ease-info-button;
 	will-change: auto;
 }
