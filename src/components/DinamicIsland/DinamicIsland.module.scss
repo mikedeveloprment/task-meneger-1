@@ -24,6 +24,26 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: relative;
 	margin-left: 3px;
+	transition: 0.6s $ease-info-mini;
 	margin-right: 2px;
+}
+
+.svg {
+	position: absolute;
+	width: 84%;
+	height: 84%;
+	stroke-dasharray: 64;
+	stroke-dashoffset: 64;
+	transition: 1s ease;
+	rotate: -90deg;
+}
+.incrementActive {
+	margin-right: 4px;
+
+	.svg {
+		stroke-dashoffset: 0;
+		rotate: 0deg;
+	}
 }

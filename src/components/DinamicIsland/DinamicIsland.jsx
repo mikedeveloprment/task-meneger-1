@@ -32,8 +32,30 @@ const DinamicIsland = ({ textValue }) => {
 			onClick={dinamicIslandOnClickFunction}
 			className={`${clas.nav} black1-bg`}
 		>
-			<div className={clas.increment}>
+			<div
+				className={
+					animClick
+						? `${clas.increment} ${clas.incrementActive}`
+						: `${clas.increment}`
+				}
+			>
 				<Increment animClick={animClick} />
+				<svg
+					className={clas.svg}
+					width="22"
+					height="22"
+					viewBox="0 0 22 24"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<path
+						d="M10.5 2C15.747 1.73024 21.0034 6.33496 21 11.9944C20.9966 17.5141 16.5228 21.9888 11 21.9888C5.47715 21.9888 1.00337 17.5141 1 11.9944C0.996551 6.33496 5.98371 1.7309 11.5 2"
+						stroke="#00DC54"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					/>
+				</svg>
 			</div>
 			<TextSplit textValue={textValue} />
 			<ButtonStylezed />

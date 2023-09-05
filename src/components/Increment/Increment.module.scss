@@ -30,15 +30,6 @@
 	}
 }
 
-.clas {
-	position: absolute;
-	height: 225%;
-	stroke-dasharray: 64;
-	stroke-dashoffset: 64;
-	transition: 1s ease-in-out;
-	rotate: -90deg;
-}
-
 @keyframes increment-preload {
 	100% {
 		transform: scaleY(1);
@@ -47,15 +38,12 @@
 
 .incrementNavClickMain {
 	rotate: 90deg;
-	.clas {
-		stroke-dashoffset: 0;
-		rotate: 0deg;
-	}
+
 	&::before,
 	&::after {
 		content: "";
 		position: absolute;
 		background: $green;
-		height: 80%;
+		height: 90%;
 	}
 }
