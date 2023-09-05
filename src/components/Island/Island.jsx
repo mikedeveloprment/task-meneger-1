@@ -49,7 +49,7 @@ const Island = () => {
 					<ButtonBig
 						onCLickButton={clickCreate}
 						text="Set Date"
-						anotherStyles="height_1 size_1 mg_b_1 blue2-bg  blue1-co"
+						anotherStyles="height_1 size_1 mg_b_1 blue2-bg blue1-co"
 					/>
 					<ButtonBig
 						text="Create"

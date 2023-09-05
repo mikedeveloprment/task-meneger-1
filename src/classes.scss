@@ -34,10 +34,7 @@
 
 //height
 .height_1 {
-	@include ad-value("height", 36, 35.4, 0, 1600, 1);
-}
-.height_2 {
-	@include ad-value("height", 33, 28, 0, 1600, 1);
+	@include ad-value("height", 38, 36, 0, 1600, 1);
 }
 
 //
@@ -45,19 +42,18 @@
 //font-size
 .size_1 {
 	font-weight: 500;
-	@include ad-value("font-size", 12, 10.7, 0, 1600, 1);
+	@include ad-value("font-size", 13, 11.5, 0, 1600, 1);
 }
 .size_2 {
 	font-weight: 500;
-	@include ad-value("font-size", 10.8, 9.45, 0, 1600, 1);
+	@include ad-value("font-size", 12, 10.25, 0, 1600, 1);
 }
-
 .size_3 {
 	font-weight: 500;
-	@include ad-value("font-size", 9.2, 8.6, 0, 1600, 1);
+	@include ad-value("font-size", 10, 9, 0, 1600, 1);
 }
 .size_4 {
-	@include ad-value("font-size", 10.4, 8.9, 0, 1600, 1);
+	@include ad-value("font-size", 11, 9, 0, 1600, 1);
 	font-weight: 500;
 }
 //
@@ -73,9 +69,13 @@
 	@include ad-value("margin-bottom", 13, 9, 0, 1600, 1);
 	@include ad-value("margin-top", 13, 9, 0, 1600, 1);
 }
+.mg_bt_2 {
+	@include ad-value("margin-bottom", 6, 5, 0, 1600, 1);
+	@include ad-value("margin-top", 6, 5, 0, 1600, 1);
+}
 //
 
 //border
 .border-mini1 {
-	@include ad-value("border-radius", 6, 8, 0, 1600, 1);
+	@include ad-value("border-radius", 10, 8, 0, 1600, 1);
 }

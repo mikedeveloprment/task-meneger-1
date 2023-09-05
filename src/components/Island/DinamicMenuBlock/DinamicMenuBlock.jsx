@@ -15,7 +15,6 @@ const DinamicMenuBlock = () => {
 	const regim = useSelector((state) => state.tolBar.regimIslandMenu);
 	const arr1 = [...Array(24)].map((u, i) => i);
 	const arrayInActiveTime = [1, 23, 18];
-	const { resize } = useSelector((state) => state.tolBar);
 
 	const timeTagDisabledFunction = (index) => {
 		if (
@@ -24,13 +23,13 @@ const DinamicMenuBlock = () => {
 			(index != (timeComplitionEnd == "" ? index : timeComplitionEnd) &&
 				index != (timeComplitionFrom == "" ? index : timeComplitionFrom))
 		) {
-			return `${clas.time} ${clas.timeOk}  height_2 size_4`;
+			return `${clas.time} ${clas.timeOk}  size_4`;
 		}
 		if (timeComplitionFrom == index || timeComplitionEnd == index) {
-			return `${clas.time}   height_2 size_4 blue1-bg white-co`;
+			return `${clas.time}   size_4 blue1-bg white-co`;
 		}
 
-		return `${clas.time}   height_2 size_4`;
+		return `${clas.time}    size_4`;
 	};
 	const timeTagOnClickFunction = (index) => {
 		if (timeComplitionFrom === "" && timeComplitionEnd !== index) {
@@ -66,7 +65,7 @@ const DinamicMenuBlock = () => {
 	};
 	const dinamicBlockStateFunction = () => {
 		if (regim === 2) {
-			return ` ${clas.dinamicBlock} ${clas.dinamicBlockNotes} margin-bottom-1`;
+			return ` ${clas.dinamicBlock} ${clas.dinamicBlockNotes} mg_bt_2`;
 		}
 		return ` ${clas.dinamicBlock} mg_bt_1`;
 	};
