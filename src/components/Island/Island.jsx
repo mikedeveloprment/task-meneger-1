@@ -6,7 +6,11 @@ import DinamicMenuBlock from "./DinamicMenuBlock/DinamicMenuBlock";
 import ButtonBig from "../ButtonBig/ButtonBig";
 import RegimState from "./RegimState/RegimState";
 import InputCustom from "./InputCustom/InputCustom";
-import { clickBorder, clickResize } from "../../store/slices/tolBarSlice";
+import {
+	animationStane,
+	clickBorder,
+	clickResize,
+} from "../../store/slices/tolBarSlice";
 import { setItem } from "../../store/slices/taskInfoCreateSlice";
 
 const Island = () => {
@@ -37,6 +41,7 @@ const Island = () => {
 
 	const clickCreate = () => {
 		disp(setItem());
+		disp(animationStane(false));
 	};
 
 	return (
@@ -47,11 +52,11 @@ const Island = () => {
 					<RegimState />
 					<DinamicMenuBlock refFake={refFake} />
 					<ButtonBig
-						onCLickButton={clickCreate}
 						text="Set Date"
 						anotherStyles="height_1 size_1 mg_b_1 blue2-bg blue1-co"
 					/>
 					<ButtonBig
+						onCLickButton={clickCreate}
 						text="Create"
 						anotherStyles="height_1 size_1 blue1-bg white-co"
 					/>
