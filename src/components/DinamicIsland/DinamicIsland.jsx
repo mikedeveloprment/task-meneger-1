@@ -28,6 +28,7 @@ const DinamicIsland = ({ textValue }) => {
 		<nav
 			style={{
 				borderRadius: dinamicIslandStylezedFunction(),
+				transition: "0.5s cubic-bezier(0.5, 0, 0.4, 1.5)",
 			}}
 			onClick={dinamicIslandOnClickFunction}
 			className={`${clas.nav} black1-bg`}
