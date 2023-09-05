@@ -10,7 +10,7 @@ const TextSplit = ({ textValue = "Text" }) => {
 			{textValueArray.map((item, index) => (
 				<span
 					key={index}
-					className={clas.letter}
+					className={`${clas.letter} size_1`}
 					style={{
 						animationDelay: `${(index - 1) * numberDelayLetter + 0.6}s`,
 					}}
