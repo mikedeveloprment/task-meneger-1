@@ -9,7 +9,7 @@ const Items = () => {
 		<ul className={clas.container}>
 			{items.map((item, i) => (
 				<li
-					className={`${clas.task} height_1 border-mini1 size_2 margin-bottom-1`}
+					className={`${clas.task} height_1 border-mini1 size_1 mg_b_1`}
 					key={i}
 					style={{
 						color: "#000",

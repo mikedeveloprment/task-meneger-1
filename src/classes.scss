@@ -42,7 +42,7 @@
 //font-size
 .size_1 {
 	font-weight: 500;
-	@include ad-value("font-size", 12.8, 11.2, 0, 1600, 1);
+	@include ad-value("font-size", 12.8, 11.3, 0, 1600, 1);
 }
 .size_2 {
 	font-weight: 500;
@@ -77,5 +77,5 @@
 
 //border
 .border-mini1 {
-	@include ad-value("border-radius", 10, 9, 0, 1600, 1);
+	@include ad-value("border-radius", 9, 8, 0, 1600, 1);
 }
