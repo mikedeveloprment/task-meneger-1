@@ -1,9 +1,9 @@
 import React from "react";
 import clas from "./RegimState.module.scss";
-import arrow from "../../../assets/arrow-right.svg";
+import arrow from "../../../../assets/arrow-right.svg";
 import Rect from "../../Rect/Rect";
 import { useDispatch, useSelector } from "react-redux";
-import { setRegim } from "../../../store/slices/tolBarSlice";
+import { setRegim } from "../../../../store/slices/tolBarSlice";
 
 const RegimState = () => {
 	const disp = useDispatch();

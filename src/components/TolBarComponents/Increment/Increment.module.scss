@@ -1,5 +1,5 @@
-@use "../../scss/utils" as *;
-@use "../../scss/vars" as *;
+@use "../../../scss/utils" as *;
+@use "../../../scss/vars" as *;
 
 .increment {
 	@include ad-value("height", 12, 11, 0, 1600, 1);

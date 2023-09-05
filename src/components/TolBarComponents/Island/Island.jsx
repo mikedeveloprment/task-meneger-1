@@ -10,8 +10,8 @@ import {
 	animationStane,
 	clickBorder,
 	clickResize,
-} from "../../store/slices/tolBarSlice";
-import { setItem } from "../../store/slices/taskInfoCreateSlice";
+} from "../../../store/slices/tolBarSlice";
+import { setItem } from "../../../store/slices/taskInfoCreateSlice";
 
 const Island = () => {
 	const { animClick, resize, border } = useSelector((state) => state.tolBar);

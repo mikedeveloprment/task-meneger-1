@@ -1,8 +1,8 @@
 import React from "react";
 import clas from "./InputCustom.module.scss";
-import Rect from "../../Rect/Rect";
 import { useDispatch, useSelector } from "react-redux";
-import { setValue } from "../../../store/slices/taskInfoCreateSlice";
+import { setValue } from "../../../../store/slices/taskInfoCreateSlice";
+import Rect from "../../Rect/Rect";
 
 const InputCustom = () => {
 	const { timeComplitionFrom, timeComplitionEnd, text } = useSelector(

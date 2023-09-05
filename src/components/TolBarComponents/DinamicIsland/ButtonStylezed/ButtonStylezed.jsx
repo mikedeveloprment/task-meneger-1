@@ -1,9 +1,9 @@
 import React from "react";
 import clas from "./ButtonStylezed.module.scss";
-import resizeBig from "../../../assets/resize-big.svg";
-import resizeSmall from "../../../assets/resize-small.svg";
+import resizeBig from "../../../../assets/resize-big.svg";
+import resizeSmall from "../../../../assets/resize-small.svg";
 import { useDispatch, useSelector } from "react-redux";
-import { clickBorder, clickResize } from "../../../store/slices/tolBarSlice";
+import { clickBorder, clickResize } from "../../../../store/slices/tolBarSlice";
 
 const ButtonStylezed = () => {
 	const disp = useDispatch();

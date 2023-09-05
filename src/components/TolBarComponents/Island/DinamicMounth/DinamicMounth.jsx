@@ -1,5 +1,5 @@
 import React from "react";
-import right from "../../../assets/arrow-right.svg";
+import right from "../../../../assets/arrow-right.svg";
 import clas from "./DinamicMounth.module.scss";
 
 const DinamicMounth = () => {

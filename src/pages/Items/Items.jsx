@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import clas from "./Items.module.scss";
-import Rect from "../../components/Rect/Rect";
+import Rect from "../../components/TolBarComponents/Rect/Rect";
 
 const Items = () => {
 	const items = useSelector((state) => state.taskInfo.items);

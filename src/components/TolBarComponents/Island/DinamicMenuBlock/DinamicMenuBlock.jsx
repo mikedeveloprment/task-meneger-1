@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
 	setTimeComplitionEnd,
 	setTimeComplitionFrom,
-} from "../../../store/slices/taskInfoCreateSlice";
+} from "../../../../store/slices/taskInfoCreateSlice";
 import DinamicMounth from "../DinamicMounth/DinamicMounth";
 
 const DinamicMenuBlock = () => {

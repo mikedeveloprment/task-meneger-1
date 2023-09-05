@@ -1,4 +1,4 @@
-import Island from "./components/Island/Island";
+import Island from "./components/TolBarComponents/Island/Island";
 import imports from "./imports";
 import "./imports";
 import Items from "./pages/Items/Items";
