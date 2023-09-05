@@ -33,7 +33,7 @@ const DinamicIsland = ({ textValue }) => {
 			onClick={dinamicIslandOnClickFunction}
 			className={`${clas.nav} black1-bg`}
 		>
-			<div
+			<button
 				className={
 					animClick
 						? `${clas.increment} ${clas.incrementActive}`
@@ -57,7 +57,7 @@ const DinamicIsland = ({ textValue }) => {
 						stroke-linejoin="round"
 					/>
 				</svg>
-			</div>
+			</button>
 			<TextSplit textValue={textValue} />
 			<ButtonStylezed />
 		</nav>

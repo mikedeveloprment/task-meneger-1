@@ -3,13 +3,13 @@ import clas from "./Increment.module.scss";
 
 const Increment = ({ animClick }) => {
 	return (
-		<button
+		<div
 			className={
 				animClick
 					? `${clas.increment} ${clas.incrementNavClickMain}`
 					: clas.increment
 			}
-		></button>
+		></div>
 	);
 };
 

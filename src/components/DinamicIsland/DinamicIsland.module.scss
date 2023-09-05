@@ -38,6 +38,7 @@
 	stroke-dasharray: 64;
 	stroke-dashoffset: 64;
 	transition: 1s ease;
+	pointer-events: none;
 	rotate: -90deg;
 }
 .incrementActive {
