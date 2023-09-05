@@ -19,7 +19,7 @@ const InputCustom = () => {
 				}}
 				value={text}
 				placeholder="Create new titile"
-				className={`${clas.input} size_2 gray1-bg border-mini1`}
+				className={`${clas.input} size_1 gray1-bg border-mini1`}
 			/>
 			<div className={`${clas.cont} size_3 `}>
 				<span className={clas.tag}>

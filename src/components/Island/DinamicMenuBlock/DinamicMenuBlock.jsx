@@ -88,7 +88,7 @@ const DinamicMenuBlock = () => {
 			<div className={textAreaStateFunction()}>
 				<textarea
 					placeholder="Add notes"
-					className={`${clas.textArea} gray1-bg border-mini1 size_2`}
+					className={`${clas.textArea} gray1-bg border-mini1 size_1`}
 				/>
 			</div>
 			<DinamicMounth />
