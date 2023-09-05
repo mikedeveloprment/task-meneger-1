@@ -19,7 +19,7 @@ const RegimState = () => {
 		<div className={`${clas.regim} height_1 margin-bottom-1`}>
 			<div className={`${clas.selectList} mg_r_1 border-mini1`}>
 				<Rect />
-				<p className={` size_1 ${clas.text}`}>No List</p>
+				<p className={` size_2 ${clas.text}`}>No List</p>
 				<button className={clas.contIcon}>
 					<img src={arrow} />
 				</button>
