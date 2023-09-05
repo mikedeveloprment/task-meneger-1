@@ -34,7 +34,7 @@
 
 //height
 .height_1 {
-	@include ad-value("height", 38, 36, 0, 1600, 1);
+	@include ad-value("height", 38, 35, 0, 1600, 1);
 }
 
 //
@@ -77,5 +77,5 @@
 
 //border
 .border-mini1 {
-	@include ad-value("border-radius", 10, 8, 0, 1600, 1);
+	@include ad-value("border-radius", 10, 9, 0, 1600, 1);
 }
