@@ -1,3 +1,4 @@
+import Header from "./components/Header/Header";
 import Island from "./components/TolBarComponents/Island/Island";
 import imports from "./imports";
 import "./imports";
@@ -10,6 +11,7 @@ const router = imports.createBrowserRouter([
 			<div className="wrapper gray1-bg">
 				<Island />
 				<div className="pages__container">
+					<Header />
 					<Items />
 				</div>
 			</div>
