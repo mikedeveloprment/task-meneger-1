@@ -2,7 +2,7 @@
 @use "../../scss/vars" as *;
 
 .title {
-	@include ad-value("font-size", 24, 20, 0, 1600, 1);
+	@include ad-value("font-size", 22, 17, 0, 1600, 1);
 	font-weight: 600;
 	color: #000;
 }
