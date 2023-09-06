@@ -61,24 +61,13 @@
 	display: none;
 }
 
-.selectTime {
-	border-radius: 40px;
-	width: 43%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.defis {
-	transform: scaleX(1.8) scaleY(1.8);
-	color: gray;
-}
-
 .timeList {
 	display: grid;
+	position: relative;
 	grid-template-columns: repeat(4, 1fr);
 	grid-template-rows: repeat(6, 1fr);
 	width: 100%;
+	justify-content: center;
 	grid-auto-flow: column;
 	@include ad-value("gap", 6, 5, 0, 1600, 1);
 	opacity: 1;
@@ -89,7 +78,9 @@
 .timeListActive {
 	@include ad-value("height", 160, 140, 0, 1600, 1);
 	transition: height 0.5s $ease-content 0.25s, opacity 0.3s ease-in-out 0s;
-	opacity: 0;
+}
+.timeListActive2 {
+	@include ad-value("height", 310, 184, 0, 1600, 1);
 }
 .time {
 	background: #000;
@@ -115,4 +106,7 @@
 	pointer-events: none;
 	background: $gray1;
 	color: gray;
+}
+.timeHidden {
+	opacity: 0;
 }

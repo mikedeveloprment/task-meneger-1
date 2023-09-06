@@ -6,6 +6,7 @@ import {
 	setTimeComplitionFrom,
 } from "../../../../store/slices/taskInfoCreateSlice";
 import DinamicMounth from "../DinamicMounth/DinamicMounth";
+import DataBlock from "./DataBlock/DataBlock";
 
 const DinamicMenuBlock = () => {
 	const disp = useDispatch();
@@ -13,23 +14,28 @@ const DinamicMenuBlock = () => {
 		(state) => state.taskInfo
 	);
 	const regim = useSelector((state) => state.tolBar.regimIslandMenu);
-	const arr1 = [...Array(24)].map((u, i) => i);
+	const arr1 = [...Array(24)].map((_, i) => i);
 	const arrayInActiveTime = [1, 23, 18];
 
+	console.log();
+
 	const timeTagDisabledFunction = (index) => {
+		if (regim !== 1) {
+			return `${clas.time} ${clas.timeHidden} size_4`;
+		}
 		if (
 			arrayInActiveTime.includes(index) ||
 			index < timeComplitionFrom ||
 			(index != (timeComplitionEnd == "" ? index : timeComplitionEnd) &&
-				index != (timeComplitionFrom == "" ? index : timeComplitionFrom))
+				index != (timeComplitionFrom == "" ? index : timeComplitionFrom)) ||
+			Number(index) <= Number(new Date().getHours())
 		) {
-			return `${clas.time} ${clas.timeOk}  size_4`;
+			return `${clas.time} ${clas.timeOk} size_4`;
 		}
 		if (timeComplitionFrom == index || timeComplitionEnd == index) {
-			return `${clas.time}   size_4 blue1-bg white-co`;
+			return `${clas.time} size_4 blue1-bg white-co`;
 		}
-
-		return `${clas.time}    size_4`;
+		return `${clas.time} size_4`;
 	};
 	const timeTagOnClickFunction = (index) => {
 		if (timeComplitionFrom === "" && timeComplitionEnd !== index) {
@@ -73,9 +79,13 @@ const DinamicMenuBlock = () => {
 		if (regim === 2) {
 			return `${clas.notesBlock} ${clas.notesBlockActive}`;
 		}
+
 		return clas.notesBlock;
 	};
 	const timesStateFunction = () => {
+		if (regim === 3) {
+			return `${clas.timeList} ${clas.timeListActive2}`;
+		}
 		if (regim === 2) {
 			return `${clas.timeList} ${clas.timeListActive}`;
 		}
@@ -91,7 +101,6 @@ const DinamicMenuBlock = () => {
 					className={`${clas.textArea} gray1-bg border-mini1 size_1`}
 				/>
 			</div>
-			<DinamicMounth />
 			<div className={timesStateFunction()}>
 				{arr1.map((_, index) => (
 					<span
@@ -102,6 +111,7 @@ const DinamicMenuBlock = () => {
 						{string(index)}
 					</span>
 				))}
+				<DataBlock />
 			</div>
 		</div>
 	);

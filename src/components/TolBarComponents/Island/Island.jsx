@@ -10,8 +10,10 @@ import {
 	animationStane,
 	clickBorder,
 	clickResize,
+	setRegim,
 } from "../../../store/slices/tolBarSlice";
 import { setItem } from "../../../store/slices/taskInfoCreateSlice";
+import DinamicMounth from "./DinamicMounth/DinamicMounth";
 
 const Island = () => {
 	const { animClick, resize, border } = useSelector((state) => state.tolBar);
@@ -50,8 +52,11 @@ const Island = () => {
 				<div className={dinamicMenuStateFunction()}>
 					<InputCustom />
 					<RegimState />
+					<DinamicMounth />
+
 					<DinamicMenuBlock refFake={refFake} />
 					<ButtonBig
+						onCLickButton={() => disp(setRegim(3))}
 						text="Set Date"
 						anotherStyles="height_1 size_1 mg_b_1 blue2-bg blue1-co"
 					/>

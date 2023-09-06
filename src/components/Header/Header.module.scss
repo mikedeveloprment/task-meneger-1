@@ -15,5 +15,5 @@
 	word-spacing: 2px;
 }
 img {
-	height: 28px;
+	@include ad-value("height", 28, 24, 0, 1600, 1);
 }

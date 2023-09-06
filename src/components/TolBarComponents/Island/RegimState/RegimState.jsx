@@ -9,14 +9,14 @@ const RegimState = () => {
 	const disp = useDispatch();
 	const regim = useSelector((state) => state.tolBar.regimIslandMenu);
 
-	const buttonStateFunction = (index) => {
-		if (regim == index)
+	const buttonStateFunction = (index, imdex2) => {
+		if (regim == index || regim === imdex2)
 			return `${clas.buttonRegim} ${clas.buttonRegimActive}  border-mini1`;
 		return `${clas.buttonRegim} border-mini1`;
 	};
 
 	return (
-		<div className={`${clas.regim} height_1 margin-bottom-1`}>
+		<div className={`${clas.regim} height_1 mg_b_1`}>
 			<div className={`${clas.selectList} mg_r_1 border-mini1`}>
 				<Rect />
 				<p className={` size_1 ${clas.text}`}>No List</p>
@@ -26,7 +26,7 @@ const RegimState = () => {
 			</div>
 			<button
 				onClick={() => disp(setRegim(1))}
-				className={`${buttonStateFunction(1)} mg_r_1`}
+				className={`${buttonStateFunction(1, 3)} mg_r_1`}
 			>
 				<svg
 					width="24"
@@ -38,35 +38,35 @@ const RegimState = () => {
 					<g clipPath="url(#clip0_2_10888)">
 						<path
 							d="M18 5H6C4.89543 5 4 5.89543 4 7V19C4 20.1046 4.89543 21 6 21H18C19.1046 21 20 20.1046 20 19V7C20 5.89543 19.1046 5 18 5Z"
-							stroke={regim == 1 ? "white" : "#333"}
+							stroke={regim == 1 || 3 ? "white" : "#333"}
 							strokeWidth="1.5"
 							strokeLinecap="round"
 							strokeLinejoin="round"
 						/>
 						<path
 							d="M16 3V7"
-							stroke={regim == 1 ? "white" : "#333"}
+							stroke={regim == 1 || 3 ? "white" : "#333"}
 							strokeWidth="1.5"
 							strokeLinecap="round"
 							strokeLinejoin="round"
 						/>
 						<path
 							d="M8 3V7"
-							stroke={regim == 1 ? "white" : "#333"}
+							stroke={regim == 1 || 3 ? "white" : "#333"}
 							strokeWidth="1.5"
 							strokeLinecap="round"
 							strokeLinejoin="round"
 						/>
 						<path
 							d="M4 11H20"
-							stroke={regim == 1 ? "white" : "#333"}
+							stroke={regim == 1 || 3 ? "white" : "#333"}
 							strokeWidth="1.5"
 							strokeLinecap="round"
 							strokeLinejoin="round"
 						/>
 						<path
 							d="M10 16H14"
-							stroke={regim == 1 ? "white" : "#333"}
+							stroke={regim == 1 || 3 ? "white" : "#333"}
 							strokeWidth="1.5"
 							strokeLinecap="round"
 							strokeLinejoin="round"

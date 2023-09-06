@@ -1,10 +1,17 @@
 import React from "react";
 import right from "../../../../assets/arrow-right.svg";
 import clas from "./DinamicMounth.module.scss";
+import { useSelector } from "react-redux";
 
 const DinamicMounth = () => {
+	const regim = useSelector((state) => state.tolBar.regimIslandMenu);
+
 	return (
-		<div className={`${clas.mounth} height_1 blue2-bg size_2 blue1-co mg_b_1`}>
+		<div
+			className={`${
+				regim === 2 ? `${clas.mounth} ${clas.mounthHiden}` : clas.mounth
+			} height_1 blue2-bg size_2 blue1-co `}
+		>
 			<button className={clas.arrow}>
 				<img
 					src={right}
