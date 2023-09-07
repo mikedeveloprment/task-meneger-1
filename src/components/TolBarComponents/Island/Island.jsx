@@ -52,7 +52,7 @@ const Island = () => {
 				<div className={dinamicMenuStateFunction()}>
 					<InputCustom />
 					<RegimState />
-					<DinamicMounth />
+					{/* <DinamicMounth /> */}
 
 					<DinamicMenuBlock refFake={refFake} />
 					<ButtonBig

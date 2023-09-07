@@ -5,7 +5,6 @@ import {
 	setTimeComplitionEnd,
 	setTimeComplitionFrom,
 } from "../../../../store/slices/taskInfoCreateSlice";
-import DinamicMounth from "../DinamicMounth/DinamicMounth";
 import DataBlock from "./DataBlock/DataBlock";
 
 const DinamicMenuBlock = () => {
@@ -17,11 +16,9 @@ const DinamicMenuBlock = () => {
 	const arr1 = [...Array(24)].map((_, i) => i);
 	const arrayInActiveTime = [1, 23, 18];
 
-	console.log();
-
 	const timeTagDisabledFunction = (index) => {
-		if (regim !== 1) {
-			return `${clas.time} ${clas.timeHidden} size_4`;
+		if (regim === 2) {
+			return `${clas.time} ${clas.timeHidden} `;
 		}
 		if (
 			arrayInActiveTime.includes(index) ||
@@ -69,50 +66,58 @@ const DinamicMenuBlock = () => {
 		}
 		return `${index + 1}.00`;
 	};
-	const dinamicBlockStateFunction = () => {
-		if (regim === 2) {
-			return ` ${clas.dinamicBlock} ${clas.dinamicBlockNotes} mg_bt_2`;
-		}
-		return ` ${clas.dinamicBlock} mg_bt_1`;
-	};
-	const textAreaStateFunction = () => {
-		if (regim === 2) {
-			return `${clas.notesBlock} ${clas.notesBlockActive}`;
-		}
+	const ref = React.useRef(null);
+	// const [height, setHeight] = React.useState(ref.current?.offsetHeight);
+	// React.useEffect(() => {
+	// 	setHeight(ref.current?.offsetHeight);
+	// 	console.log(ref.current?.offsetHeight);
+	// }, [ref]);
 
-		return clas.notesBlock;
-	};
-	const timesStateFunction = () => {
-		if (regim === 3) {
-			return `${clas.timeList} ${clas.timeListActive2}`;
-		}
+	const dinamicBlockFunctionState = () => {
 		if (regim === 2) {
-			return `${clas.timeList} ${clas.timeListActive}`;
+			return `${clas.dinamicBlock} ${clas.dinamicBlockRegim2}`;
 		}
-		return clas.timeList;
+		return clas.dinamicBlock;
 	};
-	//
-
 	return (
-		<div className={dinamicBlockStateFunction()}>
-			<div className={textAreaStateFunction()}>
-				<textarea
-					placeholder="Add notes"
-					className={`${clas.textArea} gray1-bg border-mini1 size_1`}
-				/>
-			</div>
-			<div className={timesStateFunction()}>
-				{arr1.map((_, index) => (
+		<div
+			className={`${dinamicBlockFunctionState()} ${
+				regim === 2 ? "mg_bt_2" : "mg_bt_1"
+			}`}
+			style={{
+				height: regim === 1 ? `${ref.current?.offsetHeight}px` : "150px",
+			}}
+		>
+			<textarea
+				placeholder="Add notes"
+				className={`${
+					regim === 2 ? `${clas.area} ${clas.areaAcive}` : clas.area
+				} gray1-bg border-mini1 size_1`}
+			/>
+			<div
+				ref={ref}
+				className={`${
+					regim === 2
+						? `${clas.timesCont} ${clas.timesContActive}`
+						: clas.timesCont
+				} gap_1`}
+			>
+				{arr1.reverse().map((_, index) => (
 					<span
-						onClick={() => timeTagOnClickFunction(index + 1)}
-						className={timeTagDisabledFunction(index + 1)}
+						// onClick={() => timeTagOnClickFunction(index + 1)}
+						className={`${timeTagDisabledFunction(
+							index + 1
+						)} height_2 blue2-bg blue1-co size_4`}
 						key={index}
+						style={{
+							transitionDelay: `${index * 0.02}s`,
+						}}
 					>
 						{string(index)}
 					</span>
 				))}
-				<DataBlock />
 			</div>
+			{/* <DataBlock /> */}
 		</div>
 	);
 };

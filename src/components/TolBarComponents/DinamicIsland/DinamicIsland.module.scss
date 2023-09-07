@@ -2,8 +2,8 @@
 @use "../../../scss/vars" as *;
 
 .nav {
-	@include ad-value("height", 48, 41.5, 0, 1600, 1);
-	@include ad-value("padding", 6, 5.5, 0, 1600, 1);
+	@include ad-value("height", 48, 43, 0, 1600, 1);
+	padding: 6px;
 	width: 100%;
 	box-shadow: 0px 10px 50px 0px #0000003e;
 	border-radius: 30px;
@@ -33,14 +33,14 @@
 
 .svg {
 	position: absolute;
-	width: 82%;
-	height: 82%;
+	width: 80%;
+	height: 80%;
 	stroke-dasharray: 64;
 	stroke-dashoffset: 64;
 	transition: 1s ease;
 	fill: transparent;
 	pointer-events: none;
-	rotate: -90deg;
+	rotate: -180deg;
 }
 .incrementActive {
 	margin-right: 4px;

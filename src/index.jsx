@@ -10,10 +10,10 @@ const router = imports.createBrowserRouter([
 		element: (
 			<div className="wrapper gray1-bg">
 				<Island />
-				<div className="pages__container">
+				{/* <div className="pages__container">
 					<Header />
 					<Items />
-				</div>
+				</div> */}
 			</div>
 		),
 	},

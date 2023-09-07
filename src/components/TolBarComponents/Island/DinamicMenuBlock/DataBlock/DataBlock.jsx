@@ -7,18 +7,10 @@ const DataBlock = () => {
 	const regim = useSelector((state) => state.tolBar.regimIslandMenu);
 
 	return (
-		<div className={clas.wrapper}>
-			<div className={clas.container}>
-				{arr.map((item) => (
-					<span
-						className={`${
-							regim === 3 ? `${clas.item} ${clas.itemActive}` : clas.item
-						} blue1-co blue2-bg size_4 `}
-					>
-						{item}
-					</span>
-				))}
-			</div>
+		<div className={clas.container}>
+			{arr.map((item) => (
+				<span className={`${clas.item} blue1-co blue2-bg size_4 `}>{item}</span>
+			))}
 		</div>
 	);
 };

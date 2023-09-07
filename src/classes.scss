@@ -34,9 +34,11 @@
 
 //height
 .height_1 {
-	@include ad-value("height", 38, 35, 0, 1600, 1);
+	@include ad-value("height", 38, 36, 0, 1600, 1);
 }
-
+.height_2 {
+	@include ad-value("height", 34, 32, 0, 1600, 1);
+}
 //
 
 //font-size
@@ -78,4 +80,9 @@
 //border
 .border-mini1 {
 	@include ad-value("border-radius", 9, 8, 0, 1600, 1);
+}
+
+//gap
+.gap_1 {
+	@include ad-value("gap", 6, 5, 0, 1600, 1);
 }
