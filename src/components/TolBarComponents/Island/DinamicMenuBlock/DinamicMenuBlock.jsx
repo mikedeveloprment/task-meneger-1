@@ -30,9 +30,9 @@ const DinamicMenuBlock = () => {
 			return `${clas.time} ${clas.timeOk} size_4`;
 		}
 		if (timeComplitionFrom == index || timeComplitionEnd == index) {
-			return `${clas.time} size_4 blue1-bg white-co`;
+			return `${clas.time} ${clas.timeSelect} size_4 white-co`;
 		}
-		return `${clas.time} size_4`;
+		return `${clas.time} size_4 blue1-bg`;
 	};
 	const timeTagOnClickFunction = (index) => {
 		if (timeComplitionFrom === "" && timeComplitionEnd !== index) {
@@ -104,13 +104,16 @@ const DinamicMenuBlock = () => {
 			>
 				{arr1.reverse().map((_, index) => (
 					<span
-						// onClick={() => timeTagOnClickFunction(index + 1)}
+						onClick={() => timeTagOnClickFunction(index + 1)}
 						className={`${timeTagDisabledFunction(
 							index + 1
 						)} height_2 blue2-bg blue1-co size_4`}
 						key={index}
 						style={{
-							transitionDelay: `${index * 0.02}s`,
+							transition: `scale 0.5s ease ${`${
+								index * 0.02
+							}s`}, opacity 0.5s ease ${`${index * 0.02}s`},
+								background 0.4s ease 0s,color 0.4s ease 0s`,
 						}}
 					>
 						{string(index)}
